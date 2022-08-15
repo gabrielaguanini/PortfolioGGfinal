@@ -1,0 +1,50 @@
+<!-- ACERCA DE MI -->
+<app-encabezado></app-encabezado>
+<hr/>   
+
+    <div class="container-fluid" id="animacionacercade">
+      <img onload="animacion_acercade()" id= "imagen-acercade" src="../assets/Imagenes/ImagenesdelHeader/FotoCV.jpg" alt="imagen acerca de">
+        <h2>Acerca de mi</h2> 
+          <p id="parrafo-acercade">Diplomados en gestión académica, materiales didácticos en EaD y conocimientos en programación. Experiencia profesional en gestión y planeamiento educativo desarrollados en el ámbito académico y administrativo de la <span id="span-parrafo-acercade">Universidad Tecnológica Nacional y el Instituto Nacional Superior del Profesorado Técnico.</span>
+    </p>
+    </div>
+    
+<hr/>   
+
+<!-- CARROUSSEL Y LINKS A TRABAJOS -->
+
+    <div class="carousel">
+      <button id="botoncarrousel" onclick="atras()">ᐊ</button>
+        <img src="../assets/Imagenes/Imagenes del Carrousel/img1.jpg" id="foto" onclick="desactivarreproduccionAutomatica()">
+          <button id="botoncarrousel" onclick="adelante()">ᐅ</button>
+    </div>
+      <a name="ancla-trabajos"></a>
+        <div id="trabajos" class="container-fluid">
+          <h1>Trabajos</h1>
+          <div class="row">
+           
+                   <!-- columna izquierda -->
+        
+            <div class="col-12 col-lg-4 col-sm-12">
+              <a routerLink="/trabajos-desarrollado" fragment="h1-paginatrabajosdesarrollado"><img class="imagentrabajos" src="../assets/Imagenes/Imagenes del body/ImgLogoUTN_bco.png" alt="ImgLogoUTN_bco"></a>
+              <p id="parrafotrabajo"><a  href="https://utn.edu.ar/es/" style="text-decoration:none" target="_blank">UNIVERSIDAD TECNOLÓGICA NACIONAL - RECTORADO</a></p></div>
+                           
+         
+        
+                   <!-- columna central -->     
+        
+            <div class="col-12 col-lg-4 col-sm-12">
+              <a routerLink="/trabajos-desarrollado"><img class="imagentrabajos" src="../assets/Imagenes/Imagenes del body/Logo INSPT.png" alt="logo inspt"></a>
+              <p id="parrafotrabajo"><a  href="http://www.inspt.utn.edu.ar/" style="text-decoration:none" target="_blank">INSTITUTO NACIONAL SUPERIOR DEL PROFESORADO TECNICO</a></p></div>
+                           
+        
+                   <!-- columna derecha -->     
+        
+            <div class="col-12 col-lg-4 col-sm-12">        
+              <a routerLink="/trabajos-desarrollado"><img class="imagentrabajos" src="../assets/Imagenes/Imagenes del body/ImgLogoUTN_bco.png" alt="ImgLogoUTN_bco"></a>
+              <p id="parrafotrabajo"><a  href="https://utn.edu.ar/es/" style="text-decoration:none" target="_blank">UNIVERSIDAD TECNOLÓGICA NACIONAL - RECTORADO</a></p></div> 
+          </div>
+        </div>
+<hr/>   
+<app-footer></app-footer>
+      
