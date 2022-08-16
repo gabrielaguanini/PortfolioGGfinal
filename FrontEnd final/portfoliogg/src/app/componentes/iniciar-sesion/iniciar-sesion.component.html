@@ -1,16 +1,48 @@
-<form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
-    <div class="form-group">
+<h1 class="display-6">Bienvenido al Portfolio de
+  <small class="text-muted">Gabriela Guanini</small>
+</h1>
+<h3 class="display-6, m-5">Iniciar sesión
+  <small class="text-muted">para ingresar</small>
+</h3>
 
-      <label for="nombreUsuario">Email</label>
-      <input type="email" class="form-control" id="nombreUsuario" name="nombreUsuario" 
-      aria-describedby="emailHelp" placeholder="Enter email" [(ngModel)]="nombreUsuario" required/>
-      
-    </div>
-    <div class="form-group">
 
-      <label for="password">Contraseña</label>
-      <input type="password" class="form-control" id="password" name="password" placeholder="Password"[(ngModel)]="password" required/>
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="m-5"  novalidate>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label" for="nombreUsuario">Nombre de Usuario</label>
+  </div>
 
-    </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+
+
+    <input type="email" formControlName="nombreUsuario" id="nombreUsuario" name="nombreUsuario">
+
+
+       <div *ngIf="NombreUsuario?.errors && NombreUsuario?.touched">           
+           <p *ngIf="NombreUsuario?.hasError('required')">
+                El nombre de usuario es obligatorio
+           </p>
+       </div>
+
+  <div class="mb-3">
+      <label  class="form-label" for="password">Constraseña</label>
+    </div>    
+
+    <input type="password" formControlName="password" id="password" name="password" />
+    <div *ngIf="Password?.errors && Password?.touched">           
+      <p *ngIf="Password?.hasError('required')">
+          La contraseña es obligatoria
+         </p>
+        </div>   
+
+
+
+  <div class="mb-3">
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </div>
+
+</form>
+
+<div>
+  <p class="mb-0"> ¿No tenés cuenta? Podés registrarte acá <a href="#!" class="text-white-50-bold">Sign Up</a>
+
+  </p>
+</div>

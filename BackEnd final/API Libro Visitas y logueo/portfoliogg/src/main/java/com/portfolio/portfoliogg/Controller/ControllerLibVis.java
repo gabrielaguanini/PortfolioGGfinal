@@ -51,7 +51,7 @@ public class ControllerLibVis {
     }
 
     @PutMapping("/actualizarlibrovis/{id}")
-    public ResponseEntity<?> actualizar(@PathVariable("id") int id, @RequestBody DTOModelLibroVisitas dtoModLibVis) {
+    public ResponseEntity<?> editarLV(@PathVariable("id") int id, @RequestBody DTOModelLibroVisitas dtoModLibVis) {
 
         // VALIDAR SI EXISTE EL ID
         if (!serviceLibVis.existsById(id)) {
@@ -81,5 +81,15 @@ public class ControllerLibVis {
         }
         serviceLibVis.borrar(id);
         return new ResponseEntity(new Mensaje("Mensaje eliminado"), HttpStatus.OK);
+    }
+    
+    @GetMapping("/actualizarporid/{id}")
+    public ResponseEntity<ModelLibroVisitas>actualizarPorId(@PathVariable("id")  int id){
+    
+    if(!serviceLibVis.existsById(id)){
+      return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.BAD_REQUEST);  
+    }
+    ModelLibroVisitas modLibVis = serviceLibVis.getOne(id).get();
+    return new ResponseEntity(modLibVis, HttpStatus.OK);
     }
 }

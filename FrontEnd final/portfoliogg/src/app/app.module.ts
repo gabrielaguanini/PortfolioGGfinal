@@ -1,35 +1,42 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
-import { FooterComponent } from './componentes/footer/footer.component';
-import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
-import { PaginadosComponent } from './componentes/paginados/paginados.component';
 import { PaginaunoComponent } from './componentes/paginauno/paginauno.component';
-import { AppRoutingModule } from './ruteo/app-routing/app-routing.module';
-import {HttpClientModule} from '@angular/common/http';
-import { interceptorProvider } from './service/interceptor.service';
+import { FooterComponent } from './componentes/footer/footer.component';
+import { PaginadosComponent } from './componentes/paginados/paginados.component';
+import { AppRoutingModule} from './ruteo/app-routing/app-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorService } from './service/interceptor.service';
+import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
+import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
+import { LibrovisitasComponent } from './componentes/librovisitas/librovisitas.component';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    PaginaunoComponent,
     EncabezadoComponent,
     FooterComponent,
-    IniciarSesionComponent,
     PaginadosComponent,
-    PaginaunoComponent
+    IniciarSesionComponent,
+    LibrovisitasComponent
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+
   ],
   providers: [
-    interceptorProvider
+    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}
   ],
   bootstrap: [AppComponent]
 })
