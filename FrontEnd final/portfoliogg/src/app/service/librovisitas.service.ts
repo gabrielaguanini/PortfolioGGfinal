@@ -8,7 +8,7 @@ import { Librovisitas } from '../model/librovisitas';
 })
 export class LibrovisitasService {
 
-  lvURL = 'http://localhost:8080/listalibvis/';
+  lvURL = 'http://localhost:8080/librovisitas/';
   constructor(private httpClient : HttpClient) { }
 
   public listaLibVis():Observable<Librovisitas[]>{
@@ -17,11 +17,11 @@ export class LibrovisitasService {
   }
 
   public actualizarPorId (id:number):Observable<Librovisitas>{
-    return this.httpClient.get<Librovisitas>(this.lvURL + `/actualizarporid/${id}`)
+    return this.httpClient.get<Librovisitas>(this.lvURL + `actualizarporid/${id}`)
   }
   
   public crearMensaje (libVis:Librovisitas):Observable<any>{
-    return this.httpClient.post<Librovisitas>(this.lvURL + 'actualizarporid', Librovisitas )
+    return this.httpClient.post<Librovisitas>(this.lvURL + 'crearmensaje', Librovisitas )
   }
 
   public editarLV(id:number, libVis:Librovisitas):Observable<any>{

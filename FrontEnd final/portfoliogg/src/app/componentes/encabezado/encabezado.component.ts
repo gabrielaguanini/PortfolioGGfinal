@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { TokenService } from 'src/app/service/token.service';
 
 
 @Component({
@@ -11,13 +12,14 @@ export class EncabezadoComponent implements OnInit {
 
   isLogged=false;
 
-  constructor() { }
+  constructor(private tokenService:TokenService) { }
 
   ngOnInit(): void {
 
     }
 
   onLogOut():void{
+    this.tokenService.logOut();
     window.location.reload();
   }
 }

@@ -5,12 +5,12 @@ import { PaginaunoComponent } from './componentes/paginauno/paginauno.component'
 import { FooterComponent } from './componentes/footer/footer.component';
 import { PaginadosComponent } from './componentes/paginados/paginados.component';
 import { AppRoutingModule} from './ruteo/app-routing/app-routing.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { InterceptorService } from './service/interceptor.service';
+import { HttpClientModule} from '@angular/common/http';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
-import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { LibrovisitasComponent } from './componentes/librovisitas/librovisitas.component';
+import { FormsModule } from '@angular/forms';
+import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
+import { interceptorProvider } from './service/interceptor-service';
 
 
 
@@ -29,14 +29,13 @@ import { LibrovisitasComponent } from './componentes/librovisitas/librovisitas.c
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    ReactiveFormsModule,
     FormsModule,
+    HttpClientModule
+   
 
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi:true}
+ interceptorProvider
   ],
   bootstrap: [AppComponent]
 })

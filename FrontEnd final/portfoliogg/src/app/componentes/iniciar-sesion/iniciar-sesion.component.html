@@ -6,32 +6,23 @@
 </h3>
 
 
-<form [formGroup]="form" (ngSubmit)="onEnviar($event)" class="m-5"  novalidate>
+<form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label" for="nombreUsuario">Nombre de Usuario</label>
   </div>
 
 
 
-    <input type="email" formControlName="nombreUsuario" id="nombreUsuario" name="nombreUsuario">
+    <input type="email" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required/>
 
 
-       <div *ngIf="NombreUsuario?.errors && NombreUsuario?.touched">           
-           <p *ngIf="NombreUsuario?.hasError('required')">
-                El nombre de usuario es obligatorio
-           </p>
-       </div>
 
   <div class="mb-3">
       <label  class="form-label" for="password">Constraseña</label>
     </div>    
 
-    <input type="password" formControlName="password" id="password" name="password" />
-    <div *ngIf="Password?.errors && Password?.touched">           
-      <p *ngIf="Password?.hasError('required')">
-          La contraseña es obligatoria
-         </p>
-        </div>   
+    <input type="password"  id="password" name="password" [(ngModel)]="password" required/>
+    
 
 
 

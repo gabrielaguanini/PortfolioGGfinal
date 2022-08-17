@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AutenticationService } from 'src/app/service/autenticacion.service';
+import { LoginUsuario } from 'src/app/model/login-usuario';
+import { AuthService } from 'src/app/service/auth.service';
+import { TokenService } from 'src/app/service/token.service';
 
 
 @Component({
@@ -9,44 +10,47 @@ import { AutenticationService } from 'src/app/service/autenticacion.service';
   templateUrl: './iniciar-sesion.component.html',
   styleUrls: ['./iniciar-sesion.component.css']
 })
-export class IniciarSesionComponent implements OnInit {
-  form:FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private autenticacionService:AutenticationService, private ruta:Router) { 
-   this.form = this.formBuilder.group(
-    {
-      nombreUsuario:['',[Validators.required]],
-      password:['', [Validators.required, Validators.minLength(10)]]
-    } 
-   )
-  }
+export class IniciarSesionComponent implements OnInit {
+
+isLogged=false;
+isLogginFail=false;
+loginUsuario!:LoginUsuario;
+nombreUsuario!: string;
+password!: string;
+roles: string[] = [];
+errMsj!: string;
+
+  constructor(private tokenService:TokenService, private authService:AuthService, private router:Router) { }
 
   ngOnInit(): void {
-    
+
+    if(this.tokenService.getToken()){
+      this.isLogged=true;
+      this.isLogginFail = false;
+      this.roles = this.tokenService.getAuthorities();
+    }
   }
 
-  get NombreUsuario(){
-    return this.form.get('nombreUsuario')
+  onLogin():void{
+
+    this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password); 
+    this.authService.login(this.loginUsuario).subscribe(data=>{
+        this.isLogged=true;
+        this.isLogginFail=false;
+        this.tokenService.setToken(data.token);
+        this.tokenService.setUserName(data.nombreUsuario);
+        this.tokenService.setAuthorities(data.authorities);
+        this.roles = data.authorities;
+        this.router.navigate(['paginauno'])
+      }, err =>{
+        this.isLogged=false;
+        this.isLogginFail=true;
+        this.errMsj=err.error.mensaje;
+        
+        console.log(this.errMsj);
+      }
+    )
   }
 
-  get Password(){
-    return this.form.get('password')
-  }
-
-onEnviar(event:Event){
-  event.preventDefault;
-  this.autenticacionService.IniciarSesion(this.form.value).subscribe(data =>{
-    console.log("DATA" + JSON.stringify(data));
-    this.ruta.navigate(['/paginauno']);
-
-  })
 }
-
-}
-
-
-  
-
-  
-
-

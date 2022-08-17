@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Librovisitas } from 'src/app/model/librovisitas';
 import { LibrovisitasService } from 'src/app/service/librovisitas.service';
 
@@ -9,58 +10,37 @@ import { LibrovisitasService } from 'src/app/service/librovisitas.service';
 })
 export class LibrovisitasComponent implements OnInit {
 
-  librovisitas:Librovisitas[] =[];
-
-//DE NEW EDUCACION////////////////////////////////////////////////////////////////////
-nombreLV!:string;
-mensajeLV!:string;
-
-//DE NEW EDUCACION////////////////////////////////////////////////////////////////////
+  libroVisitasMostrar: Librovisitas[] = [];
+  nombreLV!: string;
+  mensajeLV!: string;
 
 
+  constructor(private libvisServ: LibrovisitasService) { }
+  
+
+  ngOnInit(): void
+{
+ 
+  
 
 
 
-  constructor(private libVisService:LibrovisitasService) { 
-    
-    
   }
 
-  ngOnInit(): void {
-    this.cargarLibVis();
-  }
-cargarLibVis():void{
-  this.libVisService.listaLibVis().subscribe(
-    data=>{
-      this.librovisitas = data;
-    }
-  )
-}
-
-borrarLibVis(id?:number){
-  if(id != undefined){
-    this.libVisService.borrarLibVis(id).subscribe(
-      data=>{
-        this.cargarLibVis();
-      },
-      err =>{
-        alert("No se eliminó");
+  mostrarListaLibVis(): void {
+    this.libvisServ.listaLibVis().subscribe(
+      data => {
+        this.libroVisitasMostrar = data;
       }
     )
   }
-}
 
-//DE NEW EDUCACION////////////////////////////////////////////////////////////////////
-
-onCreate():void{
-  const libvis = new Librovisitas(this.nombreLV, this.mensajeLV);
-  this.libVisService.crearMensaje(libvis).subscribe(
-    data=>{
-      alert("Nombre añadido");
-     }
-  )
-}
-
-//DE NEW EDUCACION////////////////////////////////////////////////////////////////////
-
+ 
+crearMensaje():void{
+    const libroVisitas = new Librovisitas(this.nombreLV, this.mensajeLV);
+    this.libvisServ.crearMensaje(libroVisitas).subscribe(data=>{
+      console.log("Datos personales" + JSON.stringify(data));
+      this.libvisServ=data[0];
+    } )
+  }
 }
