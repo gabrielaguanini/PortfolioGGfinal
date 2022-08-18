@@ -10,15 +10,15 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class EncabezadoComponent implements OnInit {
 
-  isLogged=false;
+  isLogged = false;
 
-  constructor(private tokenService:TokenService) { }
+  constructor(private tokenService: TokenService) { }
 
   ngOnInit(): void {
 
-    }
+  }
 
-  onLogOut():void{
+  onLogOut(): void {
     this.tokenService.logOut();
     window.location.reload();
   }

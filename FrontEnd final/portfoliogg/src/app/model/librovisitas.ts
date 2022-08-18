@@ -1,5 +1,6 @@
 export class Librovisitas {
-    id!:number;
+    
+    id?:number;
     nombreLV:string;
     mensajeLV:string;
 

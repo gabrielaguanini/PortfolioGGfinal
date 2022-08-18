@@ -10,7 +10,7 @@ export class PaginaunoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
+
   }
 
 }

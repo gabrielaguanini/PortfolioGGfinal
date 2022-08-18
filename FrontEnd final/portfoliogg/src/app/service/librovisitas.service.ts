@@ -9,26 +9,26 @@ import { Librovisitas } from '../model/librovisitas';
 export class LibrovisitasService {
 
   lvURL = 'http://localhost:8080/librovisitas/';
-  constructor(private httpClient : HttpClient) { }
 
-  public listaLibVis():Observable<Librovisitas[]>{
+  constructor(private httpClient: HttpClient) { }
 
+  public listaLibVis(): Observable<Librovisitas[]> {
     return this.httpClient.get<Librovisitas[]>(this.lvURL + 'listalibvis');
   }
 
-  public actualizarPorId (id:number):Observable<Librovisitas>{
+  public actualizarPorId(id: number): Observable<Librovisitas> {
     return this.httpClient.get<Librovisitas>(this.lvURL + `actualizarporid/${id}`)
   }
-  
-  public crearMensaje (libVis:Librovisitas):Observable<any>{
-    return this.httpClient.post<Librovisitas>(this.lvURL + 'crearmensaje', Librovisitas )
+
+  public crearMensaje(libVis: Librovisitas): Observable<any> {
+    return this.httpClient.post<any>(this.lvURL + 'crearmensaje', libVis)
   }
 
-  public editarLV(id:number, libVis:Librovisitas):Observable<any>{
-    return this.httpClient.put<Librovisitas>(this.lvURL + `actualizarlibrovis/${id}`, Librovisitas)
+  public editarLV(id: number, libVis: Librovisitas): Observable<any> {
+    return this.httpClient.put<any>(this.lvURL + `actualizarlibrovis/${id}`, libVis)
   }
 
-  public borrarLibVis(id:number):Observable<any>{
-    return this.httpClient.delete<Librovisitas>(this.lvURL + `borrarlibvis/${id}`)
+  public borrarLibVis(id?: number): Observable<any> {
+    return this.httpClient.delete<any>(this.lvURL + `borrarlibvis/${id}`)
   }
 }

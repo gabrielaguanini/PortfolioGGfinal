@@ -11,6 +11,8 @@ import { LibrovisitasComponent } from './componentes/librovisitas/librovisitas.c
 import { FormsModule } from '@angular/forms';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { interceptorProvider } from './service/interceptor-service';
+import { MsjlibvisComponent } from './componentes/msjlibvis/msjlibvis.component';
+import { EditarlibvisComponent } from './componentes/editarlibvis/editarlibvis.component';
 
 
 
@@ -23,7 +25,9 @@ import { interceptorProvider } from './service/interceptor-service';
     FooterComponent,
     PaginadosComponent,
     IniciarSesionComponent,
-    LibrovisitasComponent
+    LibrovisitasComponent,
+    MsjlibvisComponent,
+    EditarlibvisComponent
    
   ],
   imports: [

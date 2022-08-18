@@ -35,21 +35,25 @@ public class ControllerExpLab {
        return serviceExpLab.listaexplab();
    } 
    
+   @PreAuthorize("hasRole('ADMIN')")
    @PostMapping("/crearexplab")
    public void crearExpLab(@RequestBody ExperienciaLab explab){
     serviceExpLab.crearExpLab(explab);
    }
    
+   @PreAuthorize("hasRole('ADMIN')")
    @DeleteMapping("/borrarexplab/{id}")
     public void borrarExpLab(@PathVariable int id){
     serviceExpLab.borrarExpLab(id);
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/editarexplab")
     public void editarExpLab(@PathVariable ExperienciaLab explab){
            serviceExpLab.editarExpLab(explab);
     }
     
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/buscarexplab/{id}")
     @ResponseBody
     public ExperienciaLab buscarExpLab(@PathVariable int id){

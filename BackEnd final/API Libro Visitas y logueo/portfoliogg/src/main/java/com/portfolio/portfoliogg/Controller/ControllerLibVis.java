@@ -73,7 +73,7 @@ public class ControllerLibVis {
         serviceLibVis.guardar(modLibVis);
         return new ResponseEntity(new Mensaje("Libro de firmas actualizado"), HttpStatus.OK);
     }
-    @PreAuthorize("hasRole('ADMIN')")
+    
     @DeleteMapping("/borrarlibvis/{id}")
     public ResponseEntity<?> borrarLibVis(@PathVariable("id") int id) {
         if (!serviceLibVis.existsById(id)) {
