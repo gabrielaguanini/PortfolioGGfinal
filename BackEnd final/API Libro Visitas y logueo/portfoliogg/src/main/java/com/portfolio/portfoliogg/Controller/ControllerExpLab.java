@@ -49,7 +49,7 @@ public class ControllerExpLab {
     
     @PreAuthorize("hasRole('ADMIN')")
     @PutMapping("/editarexplab")
-    public void editarExpLab(@PathVariable ExperienciaLab explab){
+    public void editarExpLab(@RequestBody ExperienciaLab explab){
            serviceExpLab.editarExpLab(explab);
     }
     

@@ -13,6 +13,8 @@ import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-ses
 import { interceptorProvider } from './service/interceptor-service';
 import { MsjlibvisComponent } from './componentes/msjlibvis/msjlibvis.component';
 import { EditarlibvisComponent } from './componentes/editarlibvis/editarlibvis.component';
+import { TrabcrearComponent } from './componentes/trabcrear/trabcrear.component';
+import { EditarexplabComponent } from './componentes/editarexplab/editarexplab.component';
 
 
 
@@ -27,7 +29,9 @@ import { EditarlibvisComponent } from './componentes/editarlibvis/editarlibvis.c
     IniciarSesionComponent,
     LibrovisitasComponent,
     MsjlibvisComponent,
-    EditarlibvisComponent
+    EditarlibvisComponent,
+    TrabcrearComponent,
+    EditarexplabComponent
    
   ],
   imports: [

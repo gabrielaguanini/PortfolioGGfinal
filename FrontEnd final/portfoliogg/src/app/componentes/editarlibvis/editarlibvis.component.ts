@@ -13,12 +13,17 @@ export class EditarlibvisComponent implements OnInit {
 
   librovisitas!: Librovisitas;
 
-  constructor(private libvisServ: LibrovisitasService, private activatedRouter: ActivatedRoute, private enrutador: Router) { }
+  constructor(
+    private libvisServ: LibrovisitasService, 
+    private activatedRouter: ActivatedRoute, 
+    private enrutador: Router) { }
 
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
+
     this.libvisServ.actualizarPorId(id).subscribe(
+
       data => {
         this.librovisitas = data;
       },
@@ -32,6 +37,7 @@ export class EditarlibvisComponent implements OnInit {
   editarMensaje(): void {
 
     const id = this.activatedRouter.snapshot.params['id'];
+    
     this.libvisServ.editarLV(id, this.librovisitas).subscribe(
       data => {
         this.enrutador.navigate(['/librovisitas']);

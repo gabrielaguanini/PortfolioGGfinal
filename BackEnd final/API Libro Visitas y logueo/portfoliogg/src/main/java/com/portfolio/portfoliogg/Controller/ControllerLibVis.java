@@ -50,8 +50,8 @@ public class ControllerLibVis {
         return new ResponseEntity(new Mensaje("Mensaje guardado"), HttpStatus.OK);
     }
 
-    @PutMapping("/actualizarlibrovis/{id}")
-    public ResponseEntity<?> editarLV(@PathVariable("id") int id, @RequestBody DTOModelLibroVisitas dtoModLibVis) {
+        @PutMapping("/actualizarlibrovis/{id}")
+        public ResponseEntity<?> editarLV(@PathVariable("id") int id, @RequestBody DTOModelLibroVisitas dtoModLibVis) {
 
         // VALIDAR SI EXISTE EL ID
         if (!serviceLibVis.existsById(id)) {

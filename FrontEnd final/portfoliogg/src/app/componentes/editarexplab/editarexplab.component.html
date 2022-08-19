@@ -1,0 +1,21 @@
+<div class="container" *ngIf="paginados">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="editarExpLab()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreExp">Tu nombre </label>
+                    <input type="text" class="form-control" id="nombreExp" name="nombreExp"
+                        [(ngModel)]="paginados.nombreExp" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripcionExp">Tu mensaje</label>
+                    <input type="text" class="form-control" id="descripcionExp" name="descripcionExp"
+                        [(ngModel)]="paginados.descripcionExp" required>
+                </div>
+                <button class="btn btn-primary">
+                    Enviar
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

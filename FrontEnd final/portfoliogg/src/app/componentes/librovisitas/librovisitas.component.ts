@@ -28,7 +28,8 @@ export class LibrovisitasComponent implements OnInit {
 
     }
   }
-  //cargarEducacion()
+
+
   mostrarListaLibVis(): void {
     this.libvisServ.listaLibVis().subscribe(
       data => {
