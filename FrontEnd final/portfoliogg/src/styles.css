@@ -1,3 +1,21 @@
+
+/* IMAGEN DE FONDO LOGIN */
+
+#imagendefondologin{   
+    
+    height: 600px;
+    background-image: url("./assets/Imagenes/ImagenesdelHeader/surface-rkr_jnaGzIk-unsplash.jpg"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+    background-color: #FCF3CF;
+    border-radius: 30%;
+   border-style:groove;
+
+}
+
+
 /* NAVBAR */
 
 nav {
