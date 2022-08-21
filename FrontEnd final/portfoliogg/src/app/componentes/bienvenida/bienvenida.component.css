@@ -1,11 +1,13 @@
 
+#divbienvenida {
+   
+    transition-duration: 10s;
+  }
+
 /*===================
 Bienvenida
 ====================*/
 
-#zzz{
-    transition-duration: 10s;
-}
 .waviy {
   position: relative;
   -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
@@ -19,7 +21,7 @@ Bienvenida
   font-family: 'Candara';
   position: relative;
   display: inline-block;
-  color: #47474A;
+
   text-transform: uppercase;
   animation: waviy 2s infinite;
   animation-delay: calc(.1s * var(--i));
@@ -40,7 +42,6 @@ Bienvenida
 /*===================
 Boton  bienvenida
 ====================*/
-
 
 /*===================
 animation01

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+
 
 
 @Component({
@@ -6,18 +9,47 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './bienvenida.component.html',
   styleUrls: ['./bienvenida.component.css']
 })
-export class BienvenidaComponent implements OnInit {
+export class BienvenidaComponent implements OnInit, OnDestroy {
+
+interval:any;
+
+  constructor(private ruta: Router) {
+    
+
+  }
+  
+
+  ngOnInit(): void {
+     let reemplazoThis=this;
+     this.interval = setInterval(function() {
+      reemplazoThis.navegar();
+  }, 5000);
 
 
+
+  }
+
+
+
+  ngOnDestroy(): void {
+    clearInterval(this.interval);
+  }
   
 
 
-  constructor() { }
 
-  ngOnInit(): void {
-  document.body.style.overflow = 'hidden';
-  }
 
- 
+
+  navegar(): void {
+    
+    this.ruta.navigate(['/iniciar-sesion']);
+   }
+
+  
+  
 
 }
+
+
+
+
