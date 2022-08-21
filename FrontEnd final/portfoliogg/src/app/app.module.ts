@@ -15,6 +15,7 @@ import { MsjlibvisComponent } from './componentes/msjlibvis/msjlibvis.component'
 import { EditarlibvisComponent } from './componentes/editarlibvis/editarlibvis.component';
 import { TrabcrearComponent } from './componentes/trabcrear/trabcrear.component';
 import { EditarexplabComponent } from './componentes/editarexplab/editarexplab.component';
+import { BienvenidaComponent } from './componentes/bienvenida/bienvenida.component';
 
 
 
@@ -31,7 +32,8 @@ import { EditarexplabComponent } from './componentes/editarexplab/editarexplab.c
     MsjlibvisComponent,
     EditarlibvisComponent,
     TrabcrearComponent,
-    EditarexplabComponent
+    EditarexplabComponent,
+    BienvenidaComponent
    
   ],
   imports: [

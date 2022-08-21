@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BienvenidaComponent } from 'src/app/componentes/bienvenida/bienvenida.component';
 import { EditarexplabComponent } from 'src/app/componentes/editarexplab/editarexplab.component';
 import { EditarlibvisComponent } from 'src/app/componentes/editarlibvis/editarlibvis.component';
 import { IniciarSesionComponent } from 'src/app/componentes/iniciar-sesion/iniciar-sesion.component';
@@ -11,6 +12,7 @@ import { TrabcrearComponent } from 'src/app/componentes/trabcrear/trabcrear.comp
 
 const routes: Routes = [
 
+  { path: 'bienvenida', component: BienvenidaComponent }, 
   { path: 'paginauno', component: PaginaunoComponent },
   { path: 'iniciar-sesion', component: IniciarSesionComponent },
   { path: 'paginados', component: PaginadosComponent },
@@ -18,8 +20,8 @@ const routes: Routes = [
   { path: 'mensajelibvis', component: MsjlibvisComponent },
   { path: 'editarlib/:id', component: EditarlibvisComponent },
   { path: 'editarexplab/:id', component:EditarexplabComponent },
-  { path: 'trabcrear', component: TrabcrearComponent },
-  { path: '', redirectTo: 'iniciar-sesion', pathMatch: 'full' }
+  { path: 'trabcrear', component: TrabcrearComponent }, 
+  { path: '', redirectTo: 'bienvenida', pathMatch: 'full' }
 
 
 ];
