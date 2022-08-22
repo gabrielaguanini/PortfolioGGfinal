@@ -1,15 +1,17 @@
-<app-encabezado></app-encabezado>
+<app-encabezadopeque></app-encabezadopeque>
 
 <div class="container">
     <div class="row">
         <h1>Libro de visitas</h1>
         <div>
             <button type="button" class="btn btn-secondary btn-lg btn-block" routerLink="/mensajelibvis">
-                FIRMAR ➳
-            </button>
+                FIRMAR ➳               
+            </button>   
+            <br>
+            <br>
+            <br>        
         </div>
-
-        <div class="row">
+            <div class="row">
             <table>
                 <tbody class="border border-5">
                     <tr *ngFor="let Librovisitas of libroVisitasMostrar">
@@ -33,4 +35,7 @@
         </div>
     </div>
 </div>
+ <br>
+ <br>
+ <br>
 <app-footer></app-footer>

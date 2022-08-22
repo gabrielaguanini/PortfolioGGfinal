@@ -1,12 +1,25 @@
 <!-- TRABAJOS DESARROLLADO -->
-<app-encabezado></app-encabezado>
+<app-encabezadopeque></app-encabezadopeque>
+
+
+
+
+
+
+
+
 <div class="container">
   <div class="row">
-    <h1>Experiencia Laboral</h1>
+    <br>
+      <h1>Experiencia Laboral</h1>
     <div>
       <button type="button" class="btn btn-secondary" routerLink="/trabcrear">
         Agregar experiencia laboral
       </button>
+      <a href="https://drive.google.com/file/d/199cFHgnIsey15P7t9enxC5sERgJV8xgp/view?usp=sharing" class="btn btn-outline-secondary bt-lg">Ir al CV Completo</a>
+      <br>
+      <br>
+      <br>
     </div>
     <hr />
     <div *ngFor="let Paginados of paginados">
@@ -29,4 +42,4 @@
     </div>
   </div>
 </div>
-  <app-footer></app-footer>
+<app-footer></app-footer>

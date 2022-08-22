@@ -16,6 +16,7 @@ import { EditarlibvisComponent } from './componentes/editarlibvis/editarlibvis.c
 import { TrabcrearComponent } from './componentes/trabcrear/trabcrear.component';
 import { EditarexplabComponent } from './componentes/editarexplab/editarexplab.component';
 import { BienvenidaComponent } from './componentes/bienvenida/bienvenida.component';
+import { EncabezadopequeComponent } from './componentes/encabezadopeque/encabezadopeque.component';
 
 
 
@@ -33,7 +34,8 @@ import { BienvenidaComponent } from './componentes/bienvenida/bienvenida.compone
     EditarlibvisComponent,
     TrabcrearComponent,
     EditarexplabComponent,
-    BienvenidaComponent
+    BienvenidaComponent,
+    EncabezadopequeComponent
    
   ],
   imports: [
