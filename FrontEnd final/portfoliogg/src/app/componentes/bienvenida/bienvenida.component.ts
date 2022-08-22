@@ -34,19 +34,11 @@ interval:any;
   ngOnDestroy(): void {
     clearInterval(this.interval);
   }
-  
-
-
-
-
 
   navegar(): void {
     
     this.ruta.navigate(['/iniciar-sesion']);
    }
-
-  
-  
 
 }
 
