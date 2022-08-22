@@ -1,21 +1,26 @@
-<div class="container">
+<app-encabezado></app-encabezado>
+
+<div class="container, border border-5">
     <div class="row">
         <div>
             <form (ngSubmit)="crearExpLab()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombreExp">Nombre de la Institución </label>
+                    <label for="nombreExp" class="fs-4">Nombre de la Institución </label>
                     <input type="text" class="form-control" id="nombreExp" name="nombreExp" [(ngModel)]="nombreExp"
                         required>
                 </div>
                 <div class="form-group">
-                    <label for="descripcionExp">Descripción de funciones</label>
+                    <label for="descripcionExp" class="fs-4">Descripción de funciones</label>
                     <input type="text" class="form-control" id="descripcionExp" name="descripcionExp" [(ngModel)]="descripcionExp"
                         required>
                 </div>
-                <button class="btn btn-primary">
+                <button class="btn btn-outline-secondary">
                     Enviar
                 </button>
             </form>
         </div>
     </div>
 </div>
+
+
+<app-footer></app-footer>

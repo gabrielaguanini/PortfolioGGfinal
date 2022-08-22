@@ -1,35 +1,32 @@
 <!-- TRABAJOS DESARROLLADO -->
 <app-encabezado></app-encabezado>
-
-<div class="row">
-  <h1>Experiencia</h1>
-  <div class="col-lg-2">
+<div class="container">
+  <div class="row">
+    <h1>Experiencia Laboral</h1>
+    <div>
       <button type="button" class="btn btn-secondary" routerLink="/trabcrear">
-          Agregar experiencia laboral
+        Agregar experiencia laboral
       </button>
-  </div>
-<hr />
-<div *ngFor="let Paginados of paginados">
-  <div class="container-fluid">
-    <h1 id="h1-paginatrabajosdesarrollado">{{Paginados.nombreExp}}</h1>
-    <p id="p-paginatrabajosdesarrollado">
-      {{Paginados.descripcionExp}}
-    </p>
-      
-             <div *ngIf="isLogged">
-              <button class="btn btn-success" routerLink="/editarexplab/{{Paginados.id}}">
-                <i class="bi bi-pencil-fill"></i> EDITAR </button>
-             </div>
+    </div>
+    <hr />
+    <div *ngFor="let Paginados of paginados">
+      <div>
+        <h1 id="h1-paginatrabajosdesarrollado">{{Paginados.nombreExp}}</h1>
+        <p id="p-paginatrabajosdesarrollado">
+          {{Paginados.descripcionExp}}
+        </p>
 
-             <div *ngIf="isLogged">
-              <button class="btn btn-danger" (click)="borrarExpLab(Paginados.id)">
-                <i class="bi bi-trash-fill"></i>BORRAR</button>
-             </div>
+        <div class="row w-10 align-items-center">
+          <button class="btn btn-outline-secondary" routerLink="/editarexplab/{{Paginados.id}}">
+            <i class="bi bi-pencil-fill"></i> 🖉🖉🖉 </button>
+        </div>
 
-
-
-
+        <div class="row w-10 align-items-center">
+          <button class="btn btn-outline-danger" (click)="borrarExpLab(Paginados.id)">
+            <i class="bi bi-trash-fill"></i>⌫⌫⌫</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<hr />
-<app-footer></app-footer>
+  <app-footer></app-footer>
