@@ -11,7 +11,7 @@
     background-attachment: fixed;
     background-color: #FCF3CF;
     border-radius: 30%;
-   border-style:groove;
+    border-style:groove;
 
 }
 
@@ -92,6 +92,8 @@ h2{
 #trabajos{
     background-color: #F2F2F2;
     padding-top: 100px;
+    
+ 
 }
 h1{
     
@@ -100,6 +102,8 @@ h1{
     color:#323068;    
     font-weight:bold;
     padding-bottom:50px;
+    
+ 
 }
 
 .imagentrabajos{
@@ -107,6 +111,7 @@ h1{
     margin:auto;
     width:100px;
     height:100px;
+  
     }
 
 #parrafotrabajo{
@@ -170,17 +175,14 @@ div a img{
     justify-content: center;
     background-size: 600%;
     background-color: gainsboro;
-    
+  
 }
-    
-        
+
 
 #foto {
     width: 100%;
     height: 100%;
-    margin: 1%;
-    
-    
+    margin: 1%;    
 }
 
 #botoncarrousel{
@@ -190,5 +192,6 @@ border-radius: 40%;
 border-color: rgb(165, 140, 140);
 border-style: solid;
 color:#8c819b;
+
 }
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */

@@ -15,6 +15,7 @@ function adelante() {
 
 }
 
+
 function atras() {
   numb--;
   if (numb <= 1) {
@@ -22,8 +23,10 @@ function atras() {
   }
   else {
     let foto = document.getElementById("foto");
+   
     foto.src = "../assets/Imagenes/Imagenes del Carrousel/img" + numb + ".jpg";
   }
+  
 }
 
 

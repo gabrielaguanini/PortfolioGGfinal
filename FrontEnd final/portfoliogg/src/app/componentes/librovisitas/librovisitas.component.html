@@ -1,36 +1,36 @@
 <app-encabezado></app-encabezado>
 
-<div class="row">
-    <h1>Libro de visitas</h1>
-    <div class="col-lg-2">
-        <button type="button" class="btn btn-secondary" routerLink="/mensajelibvis">
-            Dejar un mensaje
-        </button>
-    </div>
+<div class="container">
+    <div class="row">
+        <h1>Libro de visitas</h1>
+        <div>
+            <button type="button" class="btn btn-secondary btn-lg btn-block" routerLink="/mensajelibvis">
+                FIRMAR ➳
+            </button>
+        </div>
 
-    <div class="col lg-1"> </div>
-    <div class="col-lg-11">
-        <table class="table">
-            <tbody>
-                <tr *ngFor="let Librovisitas of libroVisitasMostrar">
-                    <td>
-                        <h2>{{Librovisitas.nombreLV}}</h2>
-                    </td>
-                    <td>
-                        {{Librovisitas.mensajeLV}}
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-success" routerLink="/editarlib/{{Librovisitas.id}}">
-                            <i class="bi bi-pencil-fill"></i> EDITAR </button>
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="borrarMensaje(Librovisitas.id)">
-                            <i class="bi bi-trash-fill"></i>BORRAR</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="row">
+            <table>
+                <tbody class="border border-5">
+                    <tr *ngFor="let Librovisitas of libroVisitasMostrar">
+                        <td>
+                            <h2>{{Librovisitas.nombreLV}}</h2>
+                        </td>
+                        <td>
+                            {{Librovisitas.mensajeLV}}
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-outline-secondary" routerLink="/editarlib/{{Librovisitas.id}}">
+                                <i class="bi bi-pencil-fill"></i>🖉 </button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-outline-danger" (click)="borrarMensaje(Librovisitas.id)">
+                                <i class="bi bi-trash-fill"></i>⌫</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
-
 <app-footer></app-footer>

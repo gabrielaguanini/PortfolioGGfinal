@@ -1,21 +1,25 @@
-<div class="container" *ngIf="librovisitas">
+<app-encabezado></app-encabezado>
+
+<div class="container, border border-5" *ngIf="librovisitas">
     <div class="row">
         <div>
             <form (ngSubmit)="editarMensaje()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombreLV">Tu nombre </label>
+                <div class="form-group"> 
+                    <label for="nombreLV" class="fs-4">Tu nombre </label>                  
                     <input type="text" class="form-control" id="nombreLV" name="nombreLV"
                         [(ngModel)]="librovisitas.nombreLV" required>
                 </div>
                 <div class="form-group">
-                    <label for="mensajeLV">Tu mensaje</label>
+                    <label for="mensajeLV" class="fs-4">Tu mensaje</label>
                     <input type="text" class="form-control" id="mensajeLV" name="mensajeLV"
                         [(ngModel)]="librovisitas.mensajeLV" required>
                 </div>
-                <button class="btn btn-primary">
+                <button class="btn btn-outline-secondary">
                     Enviar
                 </button>
             </form>
         </div>
     </div>
 </div>
+
+<app-footer></app-footer>
