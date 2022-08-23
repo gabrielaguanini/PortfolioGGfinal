@@ -1,45 +1,3 @@
-//CARROUSSEL CON TITULOS
-
-var numb = 1;
-var invervalosegundos = 1000;
-
-function adelante() {
-  numb++;
-  if (numb > 5) {
-    return numb = 1;
-  }
-  else {
-    let foto = document.getElementById("foto");
-    foto.src = "../assets/Imagenes/Imagenes del Carrousel/img" + numb + ".jpg";
-  }
-
-}
-
-
-function atras() {
-  numb--;
-  if (numb <= 1) {
-    return numb = 5;
-  }
-  else {
-    let foto = document.getElementById("foto");
-   
-    foto.src = "../assets/Imagenes/Imagenes del Carrousel/img" + numb + ".jpg";
-  }
-  
-}
-
-
-function reproduccionAutomatica() {
-
-  adelante_automatico = setInterval(adelante, invervalosegundos);
-}
-
-function desactivarreproduccionAutomatica() {
-  clearInterval(adelante_automatico);
-
-}
-
 
 function animacion_acercade() {
   document.getElementById("animacionacercade").animate([
@@ -63,8 +21,6 @@ function animacion_footer() {
   });
 
 }
-
-
 
 
 

@@ -2,7 +2,7 @@
 <app-encabezado></app-encabezado>
 <br>
 <div class="container-fluid" id="animacionacercade">
-  <img onload="animacion_acercade(), reproduccionAutomatica()" id="imagen-acercade" src="../assets/Imagenes/ImagenesdelHeader/FotoCV.jpg"
+  <img onload="animacion_acercade()" id="imagen-acercade" src="../assets/Imagenes/ImagenesdelHeader/FotoCV.jpg"
     alt="imagen acerca de">
   <h2>Acerca de mi</h2>
   <p id="parrafo-acercade">Licenciada en Administración y Gestión de Instituciones de Educacion Superior. Diplomados en gestión académica, 
@@ -12,24 +12,19 @@
   </p>
   <a></a>
 </div>
-<hr >
+
 
 <!-- CARROUSSEL Y LINKS A TRABAJOS -->
 
-<div class="carousel">
-  <button id="botoncarrousel" class="btn btn-secondary" onclick="atras()">ᐊ</button>
-  <img src="../assets/Imagenes/Imagenes del Carrousel/img1.jpg" id="foto" onclick="desactivarreproduccionAutomatica()">
-  <button id="botoncarrousel" class="btn btn-secondary" onclick="adelante()">ᐅ</button>
-  </div>
-  <br>
-  <br>
-  <br>
-<div id="trabajos" class="container-fluid">
-  <h1>Trabajos</h1>
-  <div class="row">  
-  
+<app-slider></app-slider>  
 
  <!-- columna izquierda -->
+ <br>
+ <br>
+ <br>
+<div id="trabajos" class="container-fluid">
+ <h1>Trabajos</h1>
+ <div class="row">  
 
   <div class="col-12 col-lg-4 col-sm-12">
     <a routerLink="/paginados" fragment="h1-paginatrabajosdesarrollado"><img class="imagentrabajos"

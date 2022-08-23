@@ -1,0 +1,21 @@
+nav {
+    height: 280px;
+    background-image: url("/assets/Imagenes/ImagenesdelHeader/surface-rkr_jnaGzIk-unsplash.jpg"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+    background-color: #FCF3CF;
+    
+    }
+
+.navbar-brand{
+
+    padding-bottom: 17%;
+    }
+
+#navbar-links{
+        padding-bottom: 21.4%;    
+    }
+
+

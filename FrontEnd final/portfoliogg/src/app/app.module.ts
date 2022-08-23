@@ -17,6 +17,7 @@ import { TrabcrearComponent } from './componentes/trabcrear/trabcrear.component'
 import { EditarexplabComponent } from './componentes/editarexplab/editarexplab.component';
 import { BienvenidaComponent } from './componentes/bienvenida/bienvenida.component';
 import { EncabezadopequeComponent } from './componentes/encabezadopeque/encabezadopeque.component';
+import { SliderComponent } from './componentes/slider/slider.component';
 
 
 
@@ -35,7 +36,8 @@ import { EncabezadopequeComponent } from './componentes/encabezadopeque/encabeza
     TrabcrearComponent,
     EditarexplabComponent,
     BienvenidaComponent,
-    EncabezadopequeComponent
+    EncabezadopequeComponent,
+    SliderComponent
    
   ],
   imports: [

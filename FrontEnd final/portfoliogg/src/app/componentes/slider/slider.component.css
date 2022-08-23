@@ -1,0 +1,11 @@
+.float-center{
+	float: none;
+	padding-left: 18%;
+
+}
+
+.carousel-indicators{
+	
+		filter: invert(70%);
+	
+}
