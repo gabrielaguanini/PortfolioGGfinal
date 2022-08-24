@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { LoginUsuario } from 'src/app/model/login-usuario';
 import { AuthService } from 'src/app/service/auth.service';
 import { TokenService } from 'src/app/service/token.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 
 
 @Component({
@@ -12,6 +13,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 
 export class IniciarSesionComponent implements OnInit {
+  form:FormGroup;
 
   isLogged = false;
   isLogginFail = false;
@@ -21,7 +23,17 @@ export class IniciarSesionComponent implements OnInit {
   roles: string[] = [];
   errMsj!: string;
 
-  constructor(private tokenService: TokenService, private authService: AuthService, private router: Router) { }
+  constructor(private tokenService: TokenService, private authService: AuthService, 
+              private router: Router, private formBuilder:FormBuilder) {
+
+    this.form=this.formBuilder.group({
+        
+      nombreUsuario:['', [Validators.required]],
+      password:['', [Validators.required]]
+
+
+      })
+    }
 
   ngOnInit(): void {
 
@@ -44,13 +56,22 @@ export class IniciarSesionComponent implements OnInit {
       this.roles = data.authorities;
       this.router.navigate(['paginauno'])
     }, err => {
+      alert("Error en la autenticacion de usuario"); 
       this.isLogged = false;
       this.isLogginFail = true;
-      this.errMsj = err.error.mensaje;
-
+      this.errMsj = err.error.mensaje;     
       console.log(this.errMsj);
+      
     }
     )
+  }
+
+  get NombreUsuario(){
+    return this.form.get('nombreUsuario');
+  }
+
+  get Password(){
+    return this.form.get('password');
   }
 
 }

@@ -8,7 +8,7 @@ import { AppRoutingModule} from './ruteo/app-routing/app-routing.module';
 import { HttpClientModule} from '@angular/common/http';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
 import { LibrovisitasComponent } from './componentes/librovisitas/librovisitas.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IniciarSesionComponent } from './componentes/iniciar-sesion/iniciar-sesion.component';
 import { interceptorProvider } from './service/interceptor-service';
 import { MsjlibvisComponent } from './componentes/msjlibvis/msjlibvis.component';
@@ -44,8 +44,8 @@ import { SliderComponent } from './componentes/slider/slider.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
-   
+    HttpClientModule,
+    ReactiveFormsModule
 
   ],
   providers: [
