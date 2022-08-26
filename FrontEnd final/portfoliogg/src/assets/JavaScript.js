@@ -11,16 +11,6 @@ function animacion_acercade() {
   })
 }
 
-//ANIMACION DEL FOOTER
-
-function animacion_footer() {
-  document.getElementById("pie de pagina").animate([
-    { transform: "rotate3d(1, 0, 0, 360deg" }], {
-    duration: 2000
-
-  });
-
-}
 
 
 

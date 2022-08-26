@@ -1,35 +1,3 @@
-
-/* IMAGEN DE FONDO LOGIN */
-
-#imagendefondologin{   
-    
-    height: 600px;
-    background-image: url("./assets/Imagenes/ImagenesdelHeader/surface-rkr_jnaGzIk-unsplash.jpg"); 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-    background-attachment: fixed;
-    background-color: #FCF3CF;
-    border-radius: 30%;
-    border-style:groove;
-
-}
-
-
-/* NAVBAR */
-
-
-#encabezadopeque{
-    height: 100px;
-    background-image: url("./assets/Imagenes/ImagenesdelHeader/surface-rkr_jnaGzIk-unsplash.jpg"); 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:cover;
-    background-attachment: fixed;
-    background-color: #FCF3CF;
-}
-
-
 /* ACERCA DE */
     
 #imagen-acercade{
@@ -122,34 +90,3 @@ div a img{
     padding-top: 0%;
     border-radius: 0% 0%;
    }
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-/* 2 pagina PAGINA TRABAJOS DESARROLLADO */
-
-#h1-paginatrabajosdesarrollado{
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    color:#323068;    
-    font-weight:LIGHTER;
-    font-size:30px;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding-bottom: 40px;
-    padding-top: 40px;
-
-}
-
-#p-paginatrabajosdesarrollado{
-    text-align: justify;
-    font-family: 'Open Sans', sans-serif;
-    color:#47474A;    
-    font-weight:LIGHTER;
-    font-size:20px;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding-bottom: 40px;
-    padding-top: 40px;
-}
-
-/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-

@@ -45,7 +45,8 @@ import { SliderComponent } from './componentes/slider/slider.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+  
 
   ],
   providers: [

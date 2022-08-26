@@ -5,29 +5,34 @@
 <div class="container">
   <div class="row">
     <br>
-      <h1>Experiencia Laboral</h1>
-    <div>
-      <button type="button" class="btn btn-secondary" routerLink="/trabcrear">
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 data-aos="flip-left" data-aos-delay="200" data-aos-duration="2000">Experiencia Laboral</h1>
+    <div id="divbotones" data-aos="flip-left" data-aos-delay="200" data-aos-duration="2000">
+      <button type="button" class="btn btn-secondary" routerLink="/trabcrear" type="button">
         Agregar experiencia laboral
       </button>
-      <a href="https://drive.google.com/file/d/199cFHgnIsey15P7t9enxC5sERgJV8xgp/view?usp=sharing" class="btn btn-outline-secondary bt-lg">Ir al CV Completo</a>
-      <br>
-      <br>
+      <a href="https://drive.google.com/file/d/199cFHgnIsey15P7t9enxC5sERgJV8xgp/view?usp=sharing"
+        class="btn btn-outline-secondary bt-lg" type="button">Ir al CV Completo</a>
+      <div class="waviy">
+        <br>
+        <span class="text-secondary" style="--i:1">⇊</span>
+      </div>
       <br>
     </div>
     <hr />
-    <div *ngFor="let Paginados of paginados">
+    <div *ngFor="let Paginados of paginados" data-aos="flip-up" data-aos-delay="200" data-aos-duration="2000">
       <div>
         <h1 id="h1-paginatrabajosdesarrollado">{{Paginados.nombreExp}}</h1>
         <p id="p-paginatrabajosdesarrollado">
           {{Paginados.descripcionExp}}
         </p>
-
         <div class="row w-10 align-items-center">
           <button class="btn btn-outline-secondary" routerLink="/editarexplab/{{Paginados.id}}">
             <i class="bi bi-pencil-fill"></i> 🖉🖉🖉 </button>
         </div>
-
         <div class="row w-10 align-items-center">
           <button class="btn btn-outline-danger" (click)="borrarExpLab(Paginados.id)">
             <i class="bi bi-trash-fill"></i>⌫⌫⌫</button>
