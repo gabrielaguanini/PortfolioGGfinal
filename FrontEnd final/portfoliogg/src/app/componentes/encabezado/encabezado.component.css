@@ -7,18 +7,14 @@ nav {
     background-attachment: fixed;
     background-color: #FCF3CF;
     margin-top: -2%;
-   
+     
     
-    
     }
 
-.navbar-brand{
-
-    padding-bottom: 17%;
+    .navbar{
+        padding-bottom: 7%;
     }
 
-#navbar-links{
-        padding-bottom: 21.4%;    
-    }
+
 
 

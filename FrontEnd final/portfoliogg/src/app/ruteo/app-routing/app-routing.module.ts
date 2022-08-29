@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BienvenidaComponent } from 'src/app/componentes/bienvenida/bienvenida.component';
 import { EditarexplabComponent } from 'src/app/componentes/editarexplab/editarexplab.component';
 import { EditarlibvisComponent } from 'src/app/componentes/editarlibvis/editarlibvis.component';
+import { EncabezadoComponent } from 'src/app/componentes/encabezado/encabezado.component';
 import { IniciarSesionComponent } from 'src/app/componentes/iniciar-sesion/iniciar-sesion.component';
 import { LibrovisitasComponent } from 'src/app/componentes/librovisitas/librovisitas.component';
 import { MsjlibvisComponent } from 'src/app/componentes/msjlibvis/msjlibvis.component';

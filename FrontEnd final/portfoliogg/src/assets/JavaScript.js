@@ -9,6 +9,9 @@ function animacion_acercade() {
     duration: 4000,
 
   })
+
+
+  
 }
 
 

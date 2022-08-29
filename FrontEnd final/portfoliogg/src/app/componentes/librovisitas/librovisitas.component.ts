@@ -14,6 +14,7 @@ export class LibrovisitasComponent implements OnInit {
   libroVisitasMostrar: Librovisitas[] = [];
   isLogged = false;
 
+
   constructor(private libvisServ: LibrovisitasService, private tokenService: TokenService) { }
 
 
@@ -50,4 +51,5 @@ export class LibrovisitasComponent implements OnInit {
       )
     }
   }
+
 }
