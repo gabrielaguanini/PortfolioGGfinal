@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Paginados } from 'src/app/model/paginados';
 import { PaginadosService } from 'src/app/service/paginados.service';
 import { TokenService } from 'src/app/service/token.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-trabcrear',
@@ -20,6 +21,7 @@ export class TrabcrearComponent implements OnInit {
     private ruteador: Router) { }
 
   ngOnInit(): void {
+    AOS.init();
   }
 
   crearExpLab(){

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Paginados } from 'src/app/model/paginados';
 import { PaginadosService } from 'src/app/service/paginados.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-editarexplab',
@@ -30,8 +31,8 @@ export class EditarexplabComponent implements OnInit {
         alert("Error al editar");
         this.enrutador.navigate(['/paginados']);
       }
-
     )
+      AOS.init();
   }
 
   editarExpLab():void{

@@ -17,6 +17,7 @@ import { TrabcrearComponent } from './componentes/trabcrear/trabcrear.component'
 import { EditarexplabComponent } from './componentes/editarexplab/editarexplab.component';
 import { BienvenidaComponent } from './componentes/bienvenida/bienvenida.component';
 import { SliderComponent } from './componentes/slider/slider.component';
+import { RegistroUsuarioComponent } from './componentes/registro-usuario/registro-usuario.component';
 
 
 
@@ -37,6 +38,7 @@ import { SliderComponent } from './componentes/slider/slider.component';
     EditarexplabComponent,
     BienvenidaComponent,
     SliderComponent,
+    RegistroUsuarioComponent,
 
    
   ],

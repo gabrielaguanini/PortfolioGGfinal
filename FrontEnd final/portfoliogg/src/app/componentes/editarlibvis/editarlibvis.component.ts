@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Librovisitas } from 'src/app/model/librovisitas';
 import { LibrovisitasService } from 'src/app/service/librovisitas.service';
+import * as AOS from 'aos';
 
 
 @Component({
@@ -32,6 +33,7 @@ export class EditarlibvisComponent implements OnInit {
         this.enrutador.navigate(['/librovisitas']);
       }
     )
+    AOS.init();
   }
 
   editarMensaje(): void {

@@ -9,7 +9,9 @@ import { LibrovisitasComponent } from 'src/app/componentes/librovisitas/librovis
 import { MsjlibvisComponent } from 'src/app/componentes/msjlibvis/msjlibvis.component';
 import { PaginadosComponent } from 'src/app/componentes/paginados/paginados.component';
 import { PaginaunoComponent } from 'src/app/componentes/paginauno/paginauno.component';
+import { RegistroUsuarioComponent } from 'src/app/componentes/registro-usuario/registro-usuario.component';
 import { TrabcrearComponent } from 'src/app/componentes/trabcrear/trabcrear.component';
+
 
 const routes: Routes = [
 
@@ -22,6 +24,7 @@ const routes: Routes = [
   { path: 'editarlib/:id', component: EditarlibvisComponent },
   { path: 'editarexplab/:id', component:EditarexplabComponent },
   { path: 'trabcrear', component: TrabcrearComponent }, 
+  { path: 'nuevousuario', component: RegistroUsuarioComponent }, 
   { path: '', redirectTo: 'bienvenida', pathMatch: 'full' }
 
 

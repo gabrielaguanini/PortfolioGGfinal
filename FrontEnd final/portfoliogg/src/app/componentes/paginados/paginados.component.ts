@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { Paginados } from 'src/app/model/paginados';
 import { PaginadosService } from 'src/app/service/paginados.service';
 import { TokenService } from 'src/app/service/token.service';
+import * as AOS from 'aos';
+
 
 
 @Component({
@@ -25,8 +27,7 @@ export class PaginadosComponent implements OnInit {
     } else {
       this.isLogged = false;
     }
-
-
+    AOS.init();
   }
 
   public mostrarExpLab() {

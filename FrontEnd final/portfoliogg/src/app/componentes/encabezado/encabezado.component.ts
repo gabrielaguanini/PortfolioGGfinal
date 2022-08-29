@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import * as AOS from 'aos';
 
 import { TokenService } from 'src/app/service/token.service';
 
@@ -16,11 +16,11 @@ botonAbrir!:boolean;
   constructor(private tokenService: TokenService) { }
 
   ngOnInit(): void {
-
+    AOS.init();
 
   }
 
-  onLogOut(): void {
+  cerraSesion(): void {
     this.tokenService.logOut();
     window.location.reload();
   }

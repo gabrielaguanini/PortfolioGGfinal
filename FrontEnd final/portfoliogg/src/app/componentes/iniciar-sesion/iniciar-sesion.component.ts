@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 import { LoginUsuario } from 'src/app/model/login-usuario';
 import { AuthService } from 'src/app/service/auth.service';
 import { TokenService } from 'src/app/service/token.service';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import * as AOS from 'aos';
 
 
 @Component({
@@ -22,6 +23,7 @@ export class IniciarSesionComponent implements OnInit {
   password!: string;
   roles: string[] = [];
   errMsj!: string;
+
 
   constructor(private tokenService: TokenService, private authService: AuthService, 
               private router: Router, private formBuilder:FormBuilder) {
@@ -42,6 +44,8 @@ export class IniciarSesionComponent implements OnInit {
       this.isLogginFail = false;
       this.roles = this.tokenService.getAuthorities();
     }
+    AOS.init();
+    
   }
 
   onLogin(): void {
@@ -74,4 +78,5 @@ export class IniciarSesionComponent implements OnInit {
     return this.form.get('password');
   }
 
+  
 }

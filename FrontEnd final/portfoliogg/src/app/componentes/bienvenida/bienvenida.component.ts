@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as AOS from 'aos';
 
 
 
@@ -25,7 +26,7 @@ interval:any;
       reemplazoThis.navegar();
   }, 5000);
 
-
+     AOS.init();
 
   }
 

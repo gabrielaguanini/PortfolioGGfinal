@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-paginauno',
@@ -11,8 +11,7 @@ export class PaginaunoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
-
+  AOS.init();   
 }
 
 
