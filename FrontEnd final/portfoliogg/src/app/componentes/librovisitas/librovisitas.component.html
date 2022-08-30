@@ -22,11 +22,11 @@
                         <td>
                             {{Librovisitas.mensajeLV}}
                         </td>
-                        <td *ngIf="isLogged">
+                        <td>
                             <button class="btn btn-outline-secondary" routerLink="/editarlib/{{Librovisitas.id}}">
                                 <i class="bi bi-pencil-fill"></i>🖉 </button>
                         </td>
-                        <td *ngIf="isLogged">
+                        <td>
                             <button class="btn btn-outline-danger" (click)="borrarMensaje(Librovisitas.id)">
                                 <i class="bi bi-trash-fill"></i>⌫</button>
                         </td>

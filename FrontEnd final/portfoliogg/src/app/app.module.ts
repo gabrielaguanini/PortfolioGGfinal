@@ -23,6 +23,7 @@ import { RegistroUsuarioComponent } from './componentes/registro-usuario/registr
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +40,7 @@ import { RegistroUsuarioComponent } from './componentes/registro-usuario/registr
     BienvenidaComponent,
     SliderComponent,
     RegistroUsuarioComponent,
+   
 
    
   ],

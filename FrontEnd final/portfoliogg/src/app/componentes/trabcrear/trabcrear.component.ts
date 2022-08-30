@@ -21,6 +21,11 @@ export class TrabcrearComponent implements OnInit {
     private ruteador: Router) { }
 
   ngOnInit(): void {
+
+    if(this.tokenService.getToken()==null){
+      this.ruteador.navigate(['iniciar-sesion']);
+    }
+
     AOS.init();
   }
 

@@ -17,9 +17,14 @@ export class MsjlibvisComponent implements OnInit {
   mensajeLV!: string;
 
 
-  constructor(private libvisServ: LibrovisitasService, private tokenService: TokenService, private ruteador: Router) { }
+  constructor(private libvisServ: LibrovisitasService, 
+              private tokenService: TokenService, 
+              private ruteador: Router) { }
 
   ngOnInit(): void {
+    if(this.tokenService.getToken()==null){
+      this.ruteador.navigate(['iniciar-sesion']);
+    }
   }
 
   crearMensaje(): void {

@@ -14,8 +14,7 @@ export class RegistroUsuarioComponent implements OnInit {
 
   form:FormGroup;
 
-  isLogged = false;
-  isLogginFail = false;
+
   nuevoUsuario!: NuevoUsuario;
   nombre!:string;
   nombreUsuario!: string;
@@ -39,29 +38,23 @@ export class RegistroUsuarioComponent implements OnInit {
      }
 
   ngOnInit(): void {
-    if (this.tokenService.getToken()) {
-      this.isLogged = true;
-      this.isLogginFail = false;
-      this.roles = this.tokenService.getAuthorities();
-    }
+   
   }
 
   nuevoRegistro(): void {
 
     this.nuevoUsuario = new NuevoUsuario(this.nombre, this.nombreUsuario,this.email, this.password);
     this.nuevoUsuarioServ.nuevoUsu(this.nuevoUsuario).subscribe(data => {
-      this.isLogged = true;
-      this.isLogginFail = false;
+
       this.tokenService.setToken(data.token);
       this.tokenService.setUserName(data.nombreUsuario);
       this.tokenService.setAuthorities(data.authorities);
       this.roles = data.authorities;
+      this.tokenService.logOut();
       this.router.navigate(['iniciar-sesion']);
       
     }, err => {
-      alert("Error en la autenticacion de usuario"); 
-      this.isLogged = false;
-      this.isLogginFail = true;
+      alert("Error en la autenticacion de usuario");       
       this.errMsj = err.error.mensaje;     
       console.log(this.errMsj);
       

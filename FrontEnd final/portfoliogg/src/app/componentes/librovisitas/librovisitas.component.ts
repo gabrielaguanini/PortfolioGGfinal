@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Librovisitas } from 'src/app/model/librovisitas';
 import { LibrovisitasService } from 'src/app/service/librovisitas.service';
 import { TokenService } from 'src/app/service/token.service';
@@ -13,22 +13,21 @@ import * as AOS from 'aos';
 export class LibrovisitasComponent implements OnInit {
 
   libroVisitasMostrar: Librovisitas[] = [];
-  isLogged = false;
+ 
 
 
-  constructor(private libvisServ: LibrovisitasService, private tokenService: TokenService) { }
+  constructor(private libvisServ: LibrovisitasService, 
+              private tokenService: TokenService,
+              private router:Router
+              ) { }
 
 
   ngOnInit(): void {
 
     this.mostrarListaLibVis();
-
-    if (this.tokenService.getToken()) {
-      this.isLogged = true;
-    } else {
-      this.isLogged = false;
-
-    }
+    if(this.tokenService.getToken()==null){
+      this.router.navigate(['iniciar-sesion']);
+    }  
     AOS.init();
   }
 

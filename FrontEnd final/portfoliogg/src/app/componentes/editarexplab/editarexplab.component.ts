@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Paginados } from 'src/app/model/paginados';
 import { PaginadosService } from 'src/app/service/paginados.service';
 import * as AOS from 'aos';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-editarexplab',
@@ -16,11 +17,16 @@ export class EditarexplabComponent implements OnInit {
   constructor(
     private pagdosServ: PaginadosService, 
     private activatedRouter: ActivatedRoute, 
-    private enrutador: Router) { }
+    private enrutador: Router,
+    private tokenService:TokenService) { }
 
   ngOnInit(): void {
 
     const id = this.activatedRouter.snapshot.params['id'];
+
+    if(this.tokenService.getToken()==null){
+      this.enrutador.navigate(['iniciar-sesion']);
+    }
 
     this.pagdosServ.actualizarPorId(id).subscribe(
       

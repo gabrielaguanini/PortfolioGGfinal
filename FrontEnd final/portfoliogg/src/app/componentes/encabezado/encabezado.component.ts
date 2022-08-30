@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import * as AOS from 'aos';
-
 import { TokenService } from 'src/app/service/token.service';
 
 
@@ -13,9 +13,15 @@ export class EncabezadoComponent implements OnInit {
 
 botonAbrir!:boolean;
 
-  constructor(private tokenService: TokenService) { }
+  constructor(private tokenService: TokenService,
+              private router:Router) { }
 
   ngOnInit(): void {
+     
+    if(this.tokenService.getToken()==null){
+      this.router.navigate(['iniciar-sesion']);
+    };
+
     AOS.init();
 
   }

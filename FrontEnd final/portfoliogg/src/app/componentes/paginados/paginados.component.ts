@@ -14,19 +14,20 @@ import * as AOS from 'aos';
 })
 export class PaginadosComponent implements OnInit {
   paginados: Paginados[] = [];
-  isLogged = false;
 
-  constructor(private pagdosServ: PaginadosService, private tokenService: TokenService) { }
+
+  constructor(private pagdosServ: PaginadosService, 
+              private tokenService: TokenService,
+              private router:Router) { }
 
   ngOnInit(): void {
 
     this.mostrarExpLab();
 
-    if (this.tokenService.getToken()) {
-      this.isLogged = true;
-    } else {
-      this.isLogged = false;
+    if(this.tokenService.getToken()==null){
+      this.router.navigate(['iniciar-sesion']);
     }
+
     AOS.init();
   }
 
