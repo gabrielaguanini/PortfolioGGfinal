@@ -23,13 +23,13 @@ nav {
 
 
 #imagenargprog1{
-    width:110px;
-    height: 70px;
+    width:100px;
+    height: 60px;
     padding-bottom: 10%;
   
 }
 #imagenargprog2{
- 
+    padding-left: 5%;
     width:70px;
     height: 50px;
 }
@@ -40,8 +40,9 @@ nav {
 }
 
 #imagenargprog4{
-    width:30px;
-    height: 35px;
+    width:70px;
+    height: 40px;
+    padding-bottom: 10%;
  
 }
 #nav-item{
