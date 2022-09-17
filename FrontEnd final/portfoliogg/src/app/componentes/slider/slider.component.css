@@ -10,10 +10,14 @@
 	
 }
 
-.mydev{
-	background-image: url("/assets/Imagenes/ImagenesdelHeader/marcoslider.jpg");
-	background-repeat: no-repeat;
+.carousel-inner{
+	border-style: solid;
+	border-width: 3px;
+	border-color: #B09394;
 	
- 
-   
+}
+
+.container-fluid{
+	width:90%;
+	height:85%;
 }

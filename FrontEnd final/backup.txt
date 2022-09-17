@@ -1,0 +1,287 @@
+css encabezado component
+
+nav {
+    height: 300px;
+    background-image: url("/assets/Imagenes/ImagenesdelHeader/surface-rkr_jnaGzIk-unsplash.jpg"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    background-attachment: fixed;
+    background-color: #FCF3CF;
+    margin-top: -2%;
+     
+    
+    }
+
+.nav-item{
+    padding-right:-10%;
+}
+
+.navbar-nav{
+    padding-bottom: 40%;
+   
+}  
+
+
+
+#imagenargprog1{
+    width:110px;
+    height: 70px;
+    padding-bottom: 10%;
+  
+}
+#imagenargprog2{
+ 
+    width:70px;
+    height: 50px;
+}
+#imagenargprog3{
+  
+    width:130px;
+    height: 50px;
+}
+
+#imagenargprog4{
+    width:30px;
+    height: 35px;
+ 
+}
+#nav-item{
+    padding-left: 5%;
+    padding-top: 1%;
+}
+
+
+
+--------------------------
+
+html encabezado component
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <div class="navbar" id="navbarNav">
+    <div id="navbar-links">
+      <div class="row">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/librovisitas" data-aos="flip-left" data-aos-delay="1500"
+              data-aos-duration="2000"><img id="imagenargprog1"
+                src="../assets/Imagenes/ImagenesdelHeader/APLogo-20-20.png" alt="imgargprog"></a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/paginados/" data-aos="flip-left" data-aos-delay="2000"
+              data-aos-duration="2000"><img id="imagenargprog2"
+                src="../assets/Imagenes/ImagenesdelHeader/LogosInti (1) .png" alt="imgargprog"></a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/paginados/" data-aos="flip-left" data-aos-delay="2000"
+              data-aos-duration="2000"><img id="imagenargprog3"
+                src="../assets/Imagenes/ImagenesdelHeader/LogosInti (2).png" alt="imgargprog"></a>
+          </li>
+
+
+          <li class="nav-item" id="nav-item">
+            <a class="nav-link" routerLink="/paginados/" data-aos="flip-left" data-aos-delay="2000"
+              data-aos-duration="2000"><img id="imagenargprog4" src="../assets/Imagenes/ImagenesdelHeader/logoutn.png"
+                alt="imgargprog"></a>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="float-right">
+    <app-navbarbutton></app-navbarbutton>
+  </div>
+
+</nav>
+
+
+---------------------
+
+navbarbutton css
+
+
+/* navbarbutton*/
+.checkbox {
+    display: none;
+  }
+  
+  .button {
+    position: relative;
+    height: 3rem;
+    width: 3rem; 
+    margin:0.5cm;
+    border-width: 0.4cm;
+    background-image: url("/assets/Imagenes/ImagenesdelHeader/hamburguesa.png");
+    border-radius: 23%;
+    opacity: 0.7;
+    background-size:cover;
+    position: fixed;
+    background-color: gray;
+    top: 1vh; 
+    right: 5vw; 
+    z-index: 2000;
+    box-shadow: 0 1rem 3rem black;
+    text-align: center; 
+    cursor: pointer;
+  }
+  
+  .background {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 5.5vh; 
+    right: 5.5vw; 
+    background-image: url("/assets/Imagenes/ImagenesdelHeader/surface-rkr_jnaGzIk-unsplash.jpg");
+    z-index: 1000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:25%;
+   
+  
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+  
+  .nav {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -60vw;
+    z-index: 1500;
+    opacity: 0;
+    width: 0;
+    transition: all 0.8s;
+  }
+  
+  .list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .item {
+    margin: 1rem;
+    font-size: 36px;
+  }
+  
+  .link:link,
+  .link:visited {
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      120deg,
+      transparent 0%,
+      transparent 50%,
+      white 50%
+    );
+    background-size: 220%;
+    transition: all 0.4s;
+  }
+  
+  .link:hover,
+  .link:active {
+    color: lightgreen;
+    cursor: pointer;
+  }
+  
+  /* funcionalidad */
+  .checkbox:checked ~ .background {
+    transform: scale(80);
+  }
+  .checkbox:checked ~ .nav {
+    opacity: 1;
+    width: 100%;
+    right: 0;
+  }
+  
+  /*  */
+  /* styling hamb ICON */
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .icon,
+  .icon::before,
+  .icon::after {
+    width: 3rem;
+    height: 2px;
+    display: inline-block;
+  }
+  
+  .icon::before,
+  .icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+  }
+  
+  .icon::before {
+    top: -0.8rem;
+  }
+  .icon::after {
+    top: 0.8rem;
+  }
+  
+  .button:hover icon:before {
+    top: -1rem;
+  }
+  .button:hover icon::after {
+    top: 1rem;
+  }
+  
+  .checkbox:checked + .button .icon {
+    background-color: transparent;
+  }
+  
+  .checkbox:checked + .button .icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  .checkbox:checked + .button .icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+-----------------------------------
+
+navbarnunntton html
+
+ <input type="checkbox" id="navi-toggle" class="checkbox" />
+ <label for="navi-toggle" class="button">
+   <span class="icon">&nbsp;</span>
+ </label>
+ <div class="background">&nbsp;</div>
+
+ <!-- nav -->
+ <nav class="nav">
+   <ul class="list">
+     <li class="item"> <a class="nav-item" routerLink="/librovisitas"> Libro Visitas </a> </li>
+     <li class="item"> <a class="nav-item" routerLink="/paginados"> Experiencia Laboral </a> </li>
+     <li class="item"> <a class="nav-item" href="mailto:gabriela.guanini@gmail.com"> Contacto </a> </li>
+     <li class="item"> <a class="nav-item" href="" (click)="cerraSesion()"> Cerrar sesión </a> </li>
+   </ul>
+  </nav>
+
+
+

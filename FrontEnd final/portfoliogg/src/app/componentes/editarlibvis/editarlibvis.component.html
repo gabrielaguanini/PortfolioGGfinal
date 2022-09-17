@@ -1,4 +1,4 @@
-<app-encabezado></app-encabezado>
+<app-encabezadosinanim></app-encabezadosinanim>
 <br>
 <br>
 <div class="container" data-aos="zoom-out-right"  data-aos-delay="200" data-aos-duration="2000">
@@ -19,8 +19,9 @@
                 </div>
                 <div class="form-group, col-6">
                     <label for="mensajeLV" class="fs-4">Tu mensaje</label>
-                    <input type="text" class="form-control" id="mensajeLV" name="mensajeLV"
+                    <textarea type="text" class="form-control" id="mensajeLV" name="mensajeLV"
                         [(ngModel)]="librovisitas.mensajeLV" required>
+                    </textarea>
                 </div>
                 <br>
                 <button class="btn btn-outline-secondary">
@@ -28,6 +29,11 @@
                 </button>
             </form>
         </div>
-    </div>
+     </div>
 </div>
+<br>
+<br>
+<br>
+
+
 

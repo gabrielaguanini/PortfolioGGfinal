@@ -18,7 +18,11 @@ import { EditarexplabComponent } from './componentes/editarexplab/editarexplab.c
 import { BienvenidaComponent } from './componentes/bienvenida/bienvenida.component';
 import { SliderComponent } from './componentes/slider/slider.component';
 import { RegistroUsuarioComponent } from './componentes/registro-usuario/registro-usuario.component';
-
+import { EncabezadosinanimComponent } from './componentes/encabezadosinanim/encabezadosinanim.component';
+import { FootersinanimComponent } from './componentes/footersinanim/footersinanim.component';
+import { NavbarbuttonComponent } from './componentes/navbarbutton/navbarbutton.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 
 
 
@@ -40,6 +44,10 @@ import { RegistroUsuarioComponent } from './componentes/registro-usuario/registr
     BienvenidaComponent,
     SliderComponent,
     RegistroUsuarioComponent,
+    EncabezadosinanimComponent,
+    FootersinanimComponent,
+    NavbarbuttonComponent,
+    HabilidadesComponent
    
 
    
@@ -50,6 +58,7 @@ import { RegistroUsuarioComponent } from './componentes/registro-usuario/registr
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    NgCircleProgressModule.forRoot({})
   
 
   ],

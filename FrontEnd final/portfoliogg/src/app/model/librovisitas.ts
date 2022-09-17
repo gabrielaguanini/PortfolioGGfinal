@@ -1,7 +1,7 @@
 export class Librovisitas {
     
     id?:number;
-    nombreLV:string;
+    nombreLV?:string;
     mensajeLV:string;
 
     constructor(nombreLV:string,  mensajeLV:string){

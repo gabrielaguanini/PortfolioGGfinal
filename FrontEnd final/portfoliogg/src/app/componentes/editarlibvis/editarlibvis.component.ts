@@ -14,7 +14,7 @@ import { TokenService } from 'src/app/service/token.service';
 export class EditarlibvisComponent implements OnInit {
 
   librovisitas!: Librovisitas;
-
+ 
   constructor(
     private libvisServ: LibrovisitasService, 
     private activatedRouter: ActivatedRoute, 

@@ -15,9 +15,9 @@ export class PaginaunoComponent implements OnInit {
 
   ngOnInit(): void {  
    
-    if(this.tokenService.getToken()==null){
-      this.router.navigate(['iniciar-sesion']);
-    }
+   // if(this.tokenService.getToken()==null){
+   //   this.router.navigate(['iniciar-sesion']);
+   // }
        
   AOS.init();   
 }
