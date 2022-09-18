@@ -16,14 +16,14 @@ const routes: Routes = [
 
   { path: 'bienvenida', component: BienvenidaComponent }, 
   { path: 'paginauno', component: PaginaunoComponent },
-  //{ path: 'iniciar-sesion', component: IniciarSesionComponent },
+  { path: 'iniciar-sesion', component: IniciarSesionComponent },
   { path: 'paginados', component: PaginadosComponent },
   { path: 'librovisitas', component: LibrovisitasComponent },
   { path: 'editarlib/:id', component: EditarlibvisComponent },
   { path: 'editarexplab/:id', component:EditarexplabComponent },
   { path: 'trabcrear', component: TrabcrearComponent }, 
   { path: 'nuevousuario', component: RegistroUsuarioComponent }, 
-  //{ path: '', redirectTo: 'bienvenida', pathMatch: 'full' }
+  { path: '', redirectTo: 'bienvenida', pathMatch: 'full' }
 
 
 ];

@@ -25,16 +25,13 @@
     padding-top: 40px;
 }
 
-#divbotones{
-    padding-left: 33%;
-   }
 
 
 .waviy {
     position: relative;
 
     font-size: 60px;
-    padding-left: 24%;
+  
   }
   .waviy span {
     font-family: 'Alfa Slab One', cursive;

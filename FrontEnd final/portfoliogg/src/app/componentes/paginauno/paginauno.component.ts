@@ -11,17 +11,14 @@ import { TokenService } from 'src/app/service/token.service';
 export class PaginaunoComponent implements OnInit {
 
 
-  constructor(private tokenService:TokenService, private router:Router) { }
+  constructor(private tokenService: TokenService, private router: Router) { }
 
-  ngOnInit(): void {  
-   
-   // if(this.tokenService.getToken()==null){
-   //   this.router.navigate(['iniciar-sesion']);
-   // }
-       
-  AOS.init();   
-}
+  ngOnInit(): void {
 
+   if (this.tokenService.getToken() == null) {
+   this.router.navigate(['iniciar-sesion']);
+    }
 
-
+    AOS.init();
+  }
 }
