@@ -1,7 +1,7 @@
 <app-encabezadosinanim></app-encabezadosinanim>
 <br>
 <br>
-<div class="container">
+<div class="container-fluid">
     <div class="row" data-aos="flip-left"  data-aos-delay="200" data-aos-duration="2000">
         <h1>Libro de visitas</h1>
         <div>
@@ -15,7 +15,7 @@
             <br>
             <br>        
         </div>
-            <div class="row" id="zzz">
+            <div class="container-fluid">
             <table>
                 <tbody class="border border-5">
                   
@@ -27,16 +27,17 @@
                             {{Librovisitas.mensajeLV}}
                         </td>
                         <td>
-                            <button class="btn btn-outline-secondary" routerLink="/editarlib/{{Librovisitas.id}}">
-                                <i class="bi bi-pencil-fill"></i>🖉 </button>
+                            <button class="text-center btn btn-outline-secondary" routerLink="/editarlib/{{Librovisitas.id}}">
+                                <i class="bi bi-pencil-fill"></i>🖉🖉🖉</button>
                         </td>
                         <td>
-                            <button class="btn btn-outline-danger" (click)="borrarMensaje(Librovisitas.id)">
+                            <button class="text-center btn btn-outline-danger" (click)="borrarMensaje(Librovisitas.id)">
                                 <i class="bi bi-trash-fill"></i>⌫</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            
         </div>
     </div>
 </div>

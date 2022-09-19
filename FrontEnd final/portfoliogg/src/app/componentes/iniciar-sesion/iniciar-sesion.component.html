@@ -4,17 +4,18 @@
    background-size: cover; height: 110vh;
    border-radius: 30%;
    border-style:groove;
+   background-repeat: no-repeat;
    background-color: #FCF3CF;"  data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
   <p>Bienvenido a mi Portfolio</p>
   
  
   
-  <div class=>
+
    <div class="col-md-4 col-md-offset-4" id="login">
  
     <section id="inner-wrapper" class="login">
       <article>
-        <form #f="ngForm" [formGroup]="form" (ngSubmit)="onLogin()" novalidate>
+        <form #f="ngForm" [formGroup]="form" (ngSubmit)="onLogin()" novalidate id="formulario">
           <div class="form-group">
             <div class="input-group, row">
 
@@ -65,5 +66,5 @@
       </article>
     </section>
   </div>  
-</div>  
+
 

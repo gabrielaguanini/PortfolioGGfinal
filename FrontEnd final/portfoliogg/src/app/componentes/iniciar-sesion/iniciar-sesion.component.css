@@ -6,6 +6,7 @@
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding-top: 18vh;
    
    
 }  
@@ -18,7 +19,7 @@
 	-webkit-transform: rotateY(40deg);
 	-moz-transform: rotateY(40deg);
 	transform: rotateY(40deg);
-}
+  }
 .login:hover {
 	-webkit-transform: rotate(0);
 	-moz-transform: rotate(0);
@@ -102,7 +103,10 @@
 
 
   
-/* IMAGEN DE FONDO LOGIN */
+#formulario{
+  margin-top:-7vh;
+  margin-bottom:-7vh;
+}
 
 
   

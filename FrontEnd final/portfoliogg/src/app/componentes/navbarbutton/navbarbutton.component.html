@@ -1,15 +1,21 @@
- <input type="checkbox" id="navi-toggle" class="checkbox"/>
- <label for="navi-toggle" class="button"data-aos="flip-up" data-aos-delay="200" data-aos-duration="2000">
-   <span class="icon">&nbsp;</span>
- </label>
- <div class="background">&nbsp;</div>
+<div class="container-fluid">
+<input  id="toggle" type="checkbox"/>
 
- <!-- nav -->
- <nav class="nav">
-   <ul class="list">
-     <li class="item"> <a class="nav-item" routerLink="/librovisitas"> Libro Visitas </a> </li>
-     <li class="item"> <a class="nav-item" routerLink="/paginados"> Experiencia Laboral </a> </li>
-     <li class="item"> <a class="nav-item" href="mailto:gabriela.guanini@gmail.com"> Contacto </a> </li>
-     <li class="item"> <a class="nav-item" href="" (click)="cerraSesion()"> Cerrar sesión </a> </li>
-   </ul>
-  </nav>
+<label for="toggle" class="hamburger">
+  <div class="top-bun"></div>
+  <div class="meat"></div>
+  <div class="bottom-bun"></div>
+</label>
+
+<div class="nav"  style="
+background-image: url('./assets/Imagenes/ImagenesdelHeader/surface-rkr_jnaGzIk-unsplash3.jpg');
+ background-size: cover; background-repeat: no-repeat;">
+  <div class="nav-wrapper">
+    <nav>
+      <a class="nav-item text-secondary" routerLink="/librovisitas"> Libro Visitas </a><br>
+      <a class="nav-item text-secondary" routerLink="/paginados"> Experiencia Laboral </a><br>
+      <a class="nav-item text-secondary" href="mailto:gabriela.guanini@gmail.com"> Contacto </a><br>
+      <a class="nav-item text-secondary" href="" (click)="cerraSesion()"> Cerrar sesión </a>
+    </nav>
+  </div>
+</div>
