@@ -1,12 +1,10 @@
 
-#login {
+#loginregistro {
 	-webkit-perspective: 1000px;
 	-moz-perspective: 1000px;
 	perspective: 1000px;
-	margin-top:1px;
-	margin-left:3%;
     position: absolute;
-    top: 53%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
    
@@ -85,22 +83,8 @@
       background-position-x: 500%;
     }
   }
-
-
   
-/* IMAGEN DE FONDO LOGIN */
-
-#imagendefondologin{   
-    
-  height: 750px;
-  background-image: url("/assets/Imagenes/ImagenesdelHeader/surface-rkr_jnaGzIk-unsplash.jpg"); 
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size:cover;
-  background-attachment: fixed;
-  background-color: #FCF3CF;
-  border-radius: 30%;
-  border-style:groove;
-
-}
-  
+  #formregistro{
+    margin-top:-7vh;
+    margin-bottom:-7vh;
+  }

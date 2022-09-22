@@ -1,0 +1,17 @@
+#divmensaje{
+    max-width:60vh;
+    word-break: break-all;
+    padding-top: 3vh;
+}
+
+#divnombre{
+    text-align: right;
+    max-width:60vh;
+    word-break: break-all;
+    margin-right: 0%;
+}
+
+#divbotones{
+    padding-top: 2.5vh;  
+    padding-bottom: 0.5vh;  
+}

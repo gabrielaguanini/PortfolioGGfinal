@@ -1,86 +1,80 @@
-<div class="container-fluid" id="imagendefondologin" data-aos="fade-down"
-data-aos-easing="linear"
-data-aos-duration="1500">
-<button type="button" class="btn btn-outline-secondary" routerLink="/iniciar-sesion">
-  ⇇             
-</button> 
-
- <div class="col-md-4 col-md-offset-4" id="login">
+<div class="container-fluid" style="
+   background-image: url('./assets/Imagenes/ImagenesdelHeader/surface-rkr_jnaGzIk-unsplash.jpg');
+   background-size: cover; height: 110vh;
+   border-radius: 30%;
+   border-style:groove;
+   background-repeat: no-repeat;
+   background-color: #FCF3CF;" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
  
+ <div class="col-md-4 col-md-offset-4" id="loginregistro">
+    <br>
+    <br>
     <section id="inner-wrapper" class="login">
       <article>
-        <form #f="ngForm" [formGroup]="form" (ngSubmit)="nuevoRegistro()" novalidate>
+        <form #f="ngForm" [formGroup]="form" (ngSubmit)="nuevoRegistro()" novalidate id="formregistro">
 
           <div class="form-group">
             <div class="input-group, row">
-              <span class="input-group-addon"><i class="fa fa-envelope"> </i></span>           
+              <span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
               <label for="nombre" class="fs-5">Tu nombre </label>
-              <input type="text" class="form-control" formControlName="nombre" id="nombre"
-                name="nombre" [ngClass]="{'is-invalid': Nombre?.errors && Nombre?.touched, 'is-valid':!Nombre?.errors && Nombre?.touched}" 
-                [(ngModel)]="nombre" required>         
+              <input type="text" class="form-control" formControlName="nombre" id="nombre" name="nombre"
+                [ngClass]="{'is-invalid': Nombre?.errors && Nombre?.touched, 'is-valid':!Nombre?.errors && Nombre?.touched}"
+                [(ngModel)]="nombre" required>
 
-                <div *ngIf="Nombre?.errors && Nombre?.touched">          
-                  <h6 *ngIf="Nombre?.hasError('required')" class="text-danger">
-                    El usuario debe ser válido
-                  </h6>
-                </div>             
+              <div *ngIf="Nombre?.errors && Nombre?.touched">
+                <h6 *ngIf="Nombre?.hasError('required')" class="text-danger">
+                  El nombre debe igresarse
+                </h6>
+              </div>
             </div>
           </div>
 
 
           <div class="form-group">
             <div class="input-group, row">
-              <span class="input-group-addon"><i class="fa fa-envelope"> </i></span>           
+              <span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
               <label for="nombreUsuario" class="fs-5">Nombre de Usuario </label>
               <input type="email" class="form-control" formControlName="nombreUsuario" id="nombreUsuario"
-                name="nombreUsuario" [ngClass]="{'is-invalid': NombreUsuario?.errors && NombreUsuario?.touched, 'is-valid':!NombreUsuario?.errors && NombreUsuario?.touched}" 
-                [(ngModel)]="nombreUsuario" required>         
+                name="nombreUsuario"
+                [ngClass]="{'is-invalid': NombreUsuario?.errors && NombreUsuario?.touched, 'is-valid':!NombreUsuario?.errors && NombreUsuario?.touched}"
+                [(ngModel)]="nombreUsuario" required>
 
-                <div *ngIf="NombreUsuario?.errors && NombreUsuario?.touched">          
-                  <h6 *ngIf="NombreUsuario?.hasError('required')" class="text-danger">
-                    El usuario debe ser válido
-                  </h6>
-                </div>             
+              <div *ngIf="NombreUsuario?.errors && NombreUsuario?.touched">
+                <h6 *ngIf="NombreUsuario?.hasError('required')" class="text-danger">
+                  El usuario debe ingresarse
+                </h6>
+              </div>
             </div>
           </div>
 
 
           <div class="form-group">
             <div class="input-group, row">
-              <span class="input-group-addon"><i class="fa fa-envelope"> </i></span>           
+              <span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
               <label for="email" class="fs-5">Email</label>
-              <input type="email" class="form-control" formControlName="email" id="email"
-                name="email" [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid':!Email?.errors && Email?.touched}" 
-                [(ngModel)]="email" required>         
+              <input type="email" class="form-control" formControlName="email" id="email" name="email"
+                [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid':!Email?.errors && Email?.touched}"
+                [(ngModel)]="email" required>
 
-                <div *ngIf="Email?.errors && Email?.touched">          
-                  <h6 *ngIf="Email?.hasError('required')" class="text-danger">
-                    El email debe ser válido
-                  </h6>
-                </div>             
+              <div *ngIf="Email?.errors && Email?.touched">
+                <h6 *ngIf="Email?.hasError('required')" class="text-danger">
+                  El email debe ser válido
+                </h6>
+              </div>
             </div>
           </div>
-
-
-
-
-
-
           <div class="form-group">
             <div class="input-group, row">
               <span class="input-group-addon"><i class="fa fa-key"> </i></span>
               <label for="password" class="fs-5">Contraseña</label>
               <input type="password" class="form-control" formControlName="password" id="password" name="password"
-              [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid':!Password?.errors && Password?.touched}"
-               [(ngModel)]="password" required />
-               
-                <div *ngIf="Password?.errors && Password?.touched">
-                  <h6 *ngIf="Password?.hasError('required')" class="text-danger">
-                    La contraseña es requerida
-                  </h6>
-                </div>
-
-
+                [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid':!Password?.errors && Password?.touched}"
+                [(ngModel)]="password" required />
+              <div *ngIf="Password?.errors && Password?.touched">
+                <h6 *ngIf="Password?.hasError('required')" class="text-danger">
+                  La contraseña es necesaria
+                </h6>
+              </div>
             </div>
           </div>
           <button type="submit" class="btn btn-outline-secondary">Registrarse</button>
