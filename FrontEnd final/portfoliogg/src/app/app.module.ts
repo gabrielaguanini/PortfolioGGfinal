@@ -23,6 +23,7 @@ import { FootersinanimComponent } from './componentes/footersinanim/footersinani
 import { NavbarbuttonComponent } from './componentes/navbarbutton/navbarbutton.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
+import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 
 
 
@@ -47,7 +48,8 @@ import { HabilidadesComponent } from './componentes/habilidades/habilidades.comp
     EncabezadosinanimComponent,
     FootersinanimComponent,
     NavbarbuttonComponent,
-    HabilidadesComponent
+    HabilidadesComponent,
+    ProyectosComponent
    
 
    
