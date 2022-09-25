@@ -59,7 +59,6 @@ nav {
    }
    
 nav a {
-  position: relative;
   text-decoration:none;
   font-size: 2em;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -79,23 +78,28 @@ nav a:before {
 }
 nav a:hover {
   color: white;
+  
 }
 nav a:hover:before {
   height: 100%;
+  
 }
 
 /** Animaciones **/
 #toggle:checked + .hamburger .top-bun {
   transform: rotate(-45deg);
   margin-top: 25px;
+  
 }
 #toggle:checked + .hamburger .bottom-bun {
   opacity: 0;
   transform: rotate(45deg);
+  
 }
 #toggle:checked + .hamburger .meat {
   transform: rotate(45deg);
   margin-top: -7px;
+  
 }
 
 #toggle:checked + .hamburger + .nav {
