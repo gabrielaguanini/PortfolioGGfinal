@@ -123,3 +123,16 @@
 	height: auto;
 
 }
+
+
+@media handheld, only screen and (max-width: 567px) {
+	.marcoslider {
+	display:none;
+	}
+	}
+	
+	@media only screen and (max-width: 823px) {
+	.marcoslider {
+	display:none;
+	}
+	}

@@ -11,6 +11,7 @@ export class NavbarbuttonComponent implements OnInit {
   constructor(private tokenService:TokenService) { }
 
   ngOnInit(): void {
+    
   }
   cerraSesion(): void {
     this.tokenService.logOut();

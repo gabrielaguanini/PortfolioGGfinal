@@ -63,17 +63,7 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     margin-bottom: 100px;
 }
-.input-group-addon {
-    border-radius: 0;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
-    color: #fff;
-    background: #f3aa0c;
-    border: #f3aa0c;
-        border-right-color: rgb(243, 170, 12);
-        border-right-style: none;
-        border-right-width: medium;
-}
+
   
   p {
     font-weight: 400;
@@ -100,8 +90,6 @@
       background-position-x: 500%;
     }
   }
-
-
   
 #formulario{
   margin-top:-3vh;

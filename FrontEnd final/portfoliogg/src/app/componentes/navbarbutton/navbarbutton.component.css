@@ -1,108 +1,98 @@
 
-#toggle {
-  display: none; 
- }
-
-/**   menu **/
-.hamburger {
-  position: absolute;
-  top: 3.5em;
-  right: 5%;
-  margin-left: -2em;
-  margin-top: -45px;
-  width: 2em;
-  height: 45px;
-  z-index: 5;
+.menu{
+    text-align: right;
+    position: fixed;
+    width: 100%;
+    z-index: 200;
 }
 
-.hamburger div {
-  position: relative;
-  width: 2.5em;
-  height: 3px;
-  border-radius: 3px;
-  border-style:solid;
-  border-color: rgb(66, 66, 66);
-  border-width: 1px;
-  background-color: #616161;
-  opacity: 0.7;
-  margin-top: 8px;
-  transition: all 0.3s ease-in-out;
-  }
-
-/** Nav **/
-
-.nav {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  border-style:dotted ;
-	border-width: 3px;
-	border-color: #616161;
-  top: -100%; left: 0; right: 0; bottom: 0;
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
-  transform: scale(0);
-
-  
+#check{
+    display: none;   
 }
-.nav-wrapper {
-  position: relative;
-  overflow: hidden;
-  overflow-y: auto;
-  height: 100%;
- 
-}
-nav {
-  text-align: left;
-  margin-left: 25%;
- 
-   }
+
+.button{
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    display: inline-block;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    padding-top: 8px;
+    line-height: 8px;
+    text-align: left;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 201;
+    border-radius: 20%;
    
-nav a {
-  text-decoration:none;
-  font-size: 2em;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  display: inline-block;
-  margin-top: 1.25em;
-  transition: color 0.2s ease-in-out;
-  letter-spacing: 1px;
-  }
-nav a:before {
-  content: '';
-  height: 0;
-  position: absolute;
-  width: 0.25em;
-  background-color: white;
-  left: -0.5em;
-  transition: all 0.2s ease-in-out;
-}
-nav a:hover {
-  color: white;
-  
-}
-nav a:hover:before {
-  height: 100%;
-  
 }
 
-/** Animaciones **/
-#toggle:checked + .hamburger .top-bun {
-  transform: rotate(-45deg);
-  margin-top: 25px;
-  
-}
-#toggle:checked + .hamburger .bottom-bun {
-  opacity: 0;
-  transform: rotate(45deg);
-  
-}
-#toggle:checked + .hamburger .meat {
-  transform: rotate(45deg);
-  margin-top: -7px;
-  
+
+
+.button span{
+    height: 3px;
+    width: 100%;
+    background: #616161;
+    display: inline-block;
+    transition: all 0.5s cubic-bezier(.62,.43,.35,1.47);
 }
 
-#toggle:checked + .hamburger + .nav {
-  top: 0;
-  transform: scale(1);
+
+/* toggle boton animacion */
+#check:checked ~ .button span:nth-child(1){
+    width: 100%;
+    transform: rotate(45deg) translateY(6px) translateX(6px);
 }
+
+#check:checked ~ .button span:nth-child(2){
+    width: 0;
+}
+
+#check:checked ~ .button span:nth-child(3){
+    width: 100%;
+    transform: rotate(-45deg) translateY(-7px) translateX(7px);
+}
+
+nav{
+    text-align: left;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    height: 0;
+}
+
+nav a{
+    text-decoration: none;
+    color: #0c1019;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    transition: all 0.4s cubic-bezier(.22,.43,.35,1.5);
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: top;
+    text-align: center;
+    border-bottom: 1px solid #b4ac97;    
+}
+
+nav a:hover{
+    background: #B09394;
+}
+
+#check:checked ~ nav{
+    height: 144px;
+}
+
+#check:checked ~ nav a{
+    padding: 10px;
+    opacity: 1;
+    transform: scale(1);
+    color: #1b1b1b;
+}
+

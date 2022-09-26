@@ -14,7 +14,3 @@ function animacion_acercade() {
   
 }
 
-
-
-
-
