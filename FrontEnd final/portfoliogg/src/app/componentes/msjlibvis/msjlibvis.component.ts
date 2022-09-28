@@ -38,7 +38,8 @@ export class MsjlibvisComponent implements OnInit {
         alert("Mensaje no enviado");
         this.ruteador.navigate(['/librovisitas']);
       }
-    )   
+    )  
+    location.reload(); 
   }
 
     cerrarModal(){

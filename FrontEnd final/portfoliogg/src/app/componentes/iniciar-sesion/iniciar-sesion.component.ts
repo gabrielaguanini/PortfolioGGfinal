@@ -24,18 +24,18 @@ export class IniciarSesionComponent implements OnInit {
   roles: string[] = [];
   errMsj!: string;
 
+  
+
 
   constructor(private tokenService: TokenService, private authService: AuthService, 
-              private router: Router, private formBuilder:FormBuilder) {
+              private router: Router, private formBuilder:FormBuilder) {              
 
-    this.form=this.formBuilder.group({
-        
+    this.form=this.formBuilder.group({        
+
       nombreUsuario:['', [Validators.required]],
-      password:['', [Validators.required]]
-
-
-      })
-    }
+      password:['', [Validators.required]]      
+      }) 
+    };
 
   ngOnInit(): void {
 
@@ -43,7 +43,8 @@ export class IniciarSesionComponent implements OnInit {
       this.isLogged = true;
       this.isLogginFail = false;
       this.roles = this.tokenService.getAuthorities();
-    }
+    };
+
     AOS.init();
     
   }
@@ -78,5 +79,24 @@ export class IniciarSesionComponent implements OnInit {
     return this.form.get('password');
   }
 
+  rellenarFormulario():any{
+    
+    this.form.patchValue({ nombreUsuario: 'Invitado', password: 'Invitado'});
+      if(this.nombreUsuario=='Invitado'){
+        document.getElementById('nombreUsuario')!.style.color='white';
+        document.getElementById('password')!.style.color='white'; 
+       };
+    this.onLogin();
+    
+  };
+
+mostrarInput():any{
   
+  this.form.patchValue({ nombreUsuario: '', password: ''});
+  document.getElementById('nombreUsuario')!.style.color='black';
+  document.getElementById('password')!.style.color='black';
+
+ } 
 }
+
+

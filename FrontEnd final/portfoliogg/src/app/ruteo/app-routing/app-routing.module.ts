@@ -15,7 +15,7 @@ import { TrabcrearComponent } from 'src/app/componentes/trabcrear/trabcrear.comp
 const routes: Routes = [
 
   { path: 'bienvenida', component: BienvenidaComponent }, 
-  { path: 'paginauno', component: PaginaunoComponent },
+  { path: 'paginauno', component: PaginaunoComponent},
   { path: 'iniciar-sesion', component: IniciarSesionComponent },
   { path: 'paginados', component: PaginadosComponent },
   { path: 'librovisitas', component: LibrovisitasComponent },

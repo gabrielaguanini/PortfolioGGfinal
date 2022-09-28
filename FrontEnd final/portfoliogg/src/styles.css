@@ -1,3 +1,31 @@
+/* GENERAL */
+
+h2{
+        
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color:#D3830B;    
+    font-weight:bold;
+    padding-top:15px;
+
+}
+
+h1{
+    
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color:#323068;    
+    font-weight:bold;
+    padding-bottom:50px;
+    
+ 
+}
+
+
+a:link, a:visited, a:active{
+    text-decoration:none;
+}
+
 /* ACERCA DE */
     
 #imagen-acercade{
@@ -10,15 +38,7 @@
     
            
 }
-h2{
-        
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    color:#D3830B;    
-    font-weight:bold;
-    padding-top:15px;
 
-}
 
 #parrafo-acercade{
 
@@ -50,16 +70,7 @@ h2{
     
  
 }
-h1{
-    
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-    color:#323068;    
-    font-weight:bold;
-    padding-bottom:50px;
-    
- 
-}
+
 
 .imagentrabajos{
     display:block;
@@ -85,8 +96,11 @@ div a img{
     height:100px;
     } 
 
+/* FOOTER */    
+
 #footer{
     background-color: #1E2B38;
     padding-top: 0%;
     border-radius: 0% 0%;
    }
+

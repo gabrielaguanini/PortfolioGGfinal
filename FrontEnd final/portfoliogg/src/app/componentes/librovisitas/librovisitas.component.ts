@@ -33,9 +33,9 @@ mensajeLV!: string;
     this.modalServ.$modal.subscribe((valor)=>{this.modalLV= valor});
 
     this.mostrarListaLibVis();
-    //if(this.tokenService.getToken()==null){
-     // this.router.navigate(['iniciar-sesion']);
-    //}  
+    if(this.tokenService.getToken()==null){
+     this.router.navigate(['iniciar-sesion']);
+    }  
     AOS.init();
 
  
