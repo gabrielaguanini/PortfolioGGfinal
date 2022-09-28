@@ -1,114 +1,103 @@
 /* FORMULARIO */
 
 #login {
-	-webkit-perspective: 1000px;
-	-moz-perspective: 1000px;
-	perspective: 1000px;	
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
   flex-wrap: wrap;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-top: 18vh;
-   
-   
-}  
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .login {
-	font-family: 'Josefin Sans', sans-serif;
-	-webkit-transition: .3s;
-	-moz-transition: .3s;
-	transition: .3s;
-	-webkit-transform: rotateY(40deg);
-	-moz-transform: rotateY(40deg);
-	transform: rotateY(40deg);
-  }
+  font-family: 'Josefin Sans', sans-serif;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+  -webkit-transform: rotateY(40deg);
+  -moz-transform: rotateY(40deg);
+  transform: rotateY(40deg);
+}
+
 .login:hover {
-	-webkit-transform: rotate(0);
-	-moz-transform: rotate(0);
-	transform: rotate(0);
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  transform: rotate(0);
 }
 
 .login .form-group {
-	margin-bottom:17px;
+  margin-bottom: 17px;
   margin-left: 11px;
 }
+
 .login .form-control,
 .login .btn {
-	border-radius:0;
+  border-radius: 0;
 }
+
 .login .btn {
-	text-transform:uppercase;
-	letter-spacing:3px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
+
 .input-group-addon {
-	border-radius:0;
-	color:#fff;
-	background:#f3aa0c;
-	border:#f3aa0c;
+  border-radius: 0;
+  color: #fff;
+  background: #f3aa0c;
+  border: #f3aa0c;
 }
+
 .forgot {
-	font-size:16px;
+  font-size: 16px;
 }
+
 .forgot a {
-	color:#333;
+  color: #333;
 }
+
 .forgot a:hover {
-	color:#5cb85c;
+  color: #5cb85c;
 }
 
-#inner-wrapper, #contact-us .contact-form, #contact-us .our-address {
-    color: #1d1d1d;
-    font-size: 19px;
-    line-height: 1.7em;
-    font-weight: 300;
-    padding: 50px;
-    background: #fff;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    margin-bottom: 100px;
+#inner-wrapper,
+#contact-us .contact-form,
+#contact-us .our-address {
+  color: #1d1d1d;
+  font-size: 19px;
+  line-height: 1.7em;
+  font-weight: 300;
+  padding: 50px;
+  background: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
 }
 
-  
-  p {
-    font-weight: 400;
-    text-align: center;
-    font-size: 40px;
-    font-family: Hack, sans-serif;
-    text-transform: uppercase;
-    background: linear-gradient(90deg, #242323, #fff, #47474A);
-    letter-spacing: 5px;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-repeat: no-repeat;
-    background-size: 50%;
-    animation: shine 5s linear infinite;
-    position: relative;
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
   }
-  
-  @keyframes shine {
-    0% {
-      background-position-x: -500%;
-    }
-    100% {
-      background-position-x: 500%;
-    }
+
+  100% {
+    background-position-x: 500%;
   }
-  
-#formulario{
-  margin-top:-3vh;
-  margin-bottom:-7vh;
-  position:relative;
+}
+
+#formulario {
+  margin-top: -6vh;
+  margin-bottom: -9vh;
+  position: relative;
 }
 
 /* FLECHAS ABAJO */
 
 .waviy {
   position: relative;
-
-  font-size: 21px;
+  font-size: 15px;
 
 }
+
 .waviy span {
   font-family: 'Alfa Slab One', cursive;
   position: relative;
@@ -116,18 +105,51 @@
   text-transform: uppercase;
   animation: waviy 1.5s infinite;
   animation-delay: calc(.1s * var(--i));
-  
+
 }
+
 @keyframes waviy {
-  0%,40%,100% {
+
+  0%,
+  40%,
+  100% {
     transform: translateY(0)
   }
+
   20% {
-    transform: translateY(-20px)
+    transform: translateY(-6px)
   }
 }
 
+/* BOTON INVITADOS */
 
-  
-  
-  
+#btninvitados {
+  font-size: xx-small;
+
+}
+
+/* PARRAFO BIENVENIDA */
+
+p {
+  font-weight: 200;
+  text-align: center;
+  font-size: 30px;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #242323, #fff, #47474A);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  animation: shine 5s linear infinite;
+  position: relative;
+}
+
+@media handheld,
+only screen and (max-width: 760px) {
+  #zzz {
+    display: none;
+  }
+}
