@@ -1,22 +1,17 @@
 <div class="container-fluid" style="
    background-image: url('./assets/Imagenes/ImagenesdelHeader/surface-rkr_jnaGzIk-unsplash.jpg');
-   background-size: cover; height: 130vh;
+   background-size: cover; height: 180vh;
    border-radius: 30%;
    border-style:groove;
    background-repeat: no-repeat;
    background-color: #FCF3CF;
-   position:absolute"
-    data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
- 
- <div>
-  <button type="button" class="btn btn-outline-secondary" routerLink="/iniciar-sesion">
-      ⇇             
-   </button> 
-</div>
-
-
-
- <div class="col-md-4 col-md-offset-4" id="loginregistro">
+   position:absolute" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+  <div class="col-2">
+    <button type="button" class="btn btn-outline-secondary" routerLink="/iniciar-sesion">
+      ⇇
+    </button>
+  </div>
+  <div class="col-md-4 col-md-offset-4" id="loginregistro">
     <br>
     <br>
     <section id="inner-wrapper" class="login">
@@ -25,6 +20,12 @@
 
           <div class="form-group">
             <div class="input-group, row">
+              <div class="d-flex justify-content-center text-center" >
+                <h6 class="fs-2" id="titiniciarsesion">Registro
+                  <small class="text-muted d-flex justify-content-center">usuario</small>
+                  <br>
+                </h6>
+              </div>
               <span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
               <label for="nombre" class="fs-5">Tu nombre </label>
               <input type="text" class="form-control" formControlName="nombre" id="nombre" name="nombre"
@@ -43,7 +44,7 @@
           <div class="form-group">
             <div class="input-group, row">
               <span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
-              <label for="nombreUsuario" class="fs-5">Nombre de Usuario </label>
+              <label for="nombreUsuario" class="fs-5">Nombre de usuario </label>
               <input type="email" class="form-control" formControlName="nombreUsuario" id="nombreUsuario"
                 name="nombreUsuario"
                 [ngClass]="{'is-invalid': NombreUsuario?.errors && NombreUsuario?.touched, 'is-valid':!NombreUsuario?.errors && NombreUsuario?.touched}"
@@ -56,8 +57,6 @@
               </div>
             </div>
           </div>
-
-
           <div class="form-group">
             <div class="input-group, row">
               <span class="input-group-addon"><i class="fa fa-envelope"> </i></span>
@@ -74,7 +73,7 @@
             </div>
           </div>
           <div class="form-group">
-            <div class="input-group, row">
+            <div class="input-group, row">              
               <span class="input-group-addon"><i class="fa fa-key"> </i></span>
               <label for="password" class="fs-5">Contraseña</label>
               <input type="password" class="form-control" formControlName="password" id="password" name="password"
@@ -87,11 +86,13 @@
               </div>
             </div>
           </div>
+          <div class="text-center">
           <button type="submit" class="btn btn-outline-secondary">Registrarse</button>
           <div class="forgot">
             <hr>
             | <a routerLink="/iniciar-sesion">Ya tenés cuenta? Logueate!</a>
           </div>
+        </div>
         </form>
       </article>
     </section>

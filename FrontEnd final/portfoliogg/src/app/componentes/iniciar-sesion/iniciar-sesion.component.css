@@ -58,7 +58,7 @@
 }
 
 .forgot a:hover {
-  color: #5cb85c;
+  color: #B09394;
 }
 
 #inner-wrapper,
@@ -85,9 +85,9 @@
 }
 
 #formulario {
-  margin-top: -6vh;
-  margin-bottom: -9vh;
+ 
   position: relative;
+ 
 }
 
 /* FLECHAS ABAJO */
@@ -124,7 +124,7 @@
 /* BOTON INVITADOS */
 
 #btninvitados {
-  font-size: xx-small;
+  font-size: small;
 
 }
 
@@ -153,3 +153,4 @@ only screen and (max-width: 760px) {
     display: none;
   }
 }
+

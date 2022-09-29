@@ -34,6 +34,7 @@
 .login .btn {
 	border-radius:0;
 }
+
 .login .btn {
 	text-transform:uppercase;
 	letter-spacing:3px;
@@ -51,7 +52,7 @@
 	color:#333;
 }
 .forgot a:hover {
-	color:#5cb85c;
+	color:#B09394;
 }
 
 #inner-wrapper, #contact-us .contact-form, #contact-us .our-address {
@@ -85,10 +86,11 @@
     }
   }
   
-  #formregistro{
-    margin-top:-6vh;
-    margin-bottom:-6vh;
+  #formregistro{ 
     position:relative;
+    margin-bottom: -5vh;
+    margin-top:-5vh;
+   
    
   }
 
@@ -96,7 +98,6 @@
 
 .waviy {
   position: relative;
-
   font-size: 21px;
 
 }
