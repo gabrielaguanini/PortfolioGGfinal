@@ -26,10 +26,9 @@
     top: 0;
     z-index: 201;
     border-radius: 20%;
+    margin-top: 1vh;
    
 }
-
-
 
 .button span{
     height: 3px;
@@ -95,4 +94,6 @@ nav a:hover{
     transform: scale(1);
     color: #1b1b1b;
 }
+
+
 
