@@ -85,8 +85,8 @@
   }
 }
 
-#formulario { 
-  position: relative; 
+#formulario {
+  position: relative;
 }
 
 
@@ -127,19 +127,21 @@
   font-size: small;
 
 }
+
 @media handheld,
 only screen and (max-width: 1119px) {
   #btninvitados {
     font-size: x-small;
-    padding:1vh;
-    margin:1vh;
+    padding: 1vh;
+    margin: 1vh;
   }
 }
 
 
 /* PARRAFO BIENVENIDA */
 
-p, #bienvenida2 {
+p,
+#bienvenida2 {
   font-weight: 200;
   text-align: center;
   font-size: 30px;
@@ -154,16 +156,13 @@ p, #bienvenida2 {
   background-size: 50%;
   animation: shine 5s linear infinite;
   position: relative;
-  }
-
-
+}
 
 @media handheld,
 only screen and (max-width: 1119px) {
 
-  p{
-    display:none;
-   
+  p {
+    display: none;
+
   }
 }
-

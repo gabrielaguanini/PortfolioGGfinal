@@ -24,6 +24,7 @@ const routes: Routes = [
   { path: 'trabcrear', component: TrabcrearComponent }, 
   { path: 'nuevousuario', component: RegistroUsuarioComponent }, 
   { path: '', redirectTo: 'bienvenida', pathMatch: 'full' }
+  
 
 
 ];

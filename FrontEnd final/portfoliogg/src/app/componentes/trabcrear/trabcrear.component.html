@@ -1,14 +1,15 @@
 <app-encabezado></app-encabezado>
 <br>
 <br>
-<div class="container" data-aos="zoom-out-right"  data-aos-delay="200" data-aos-duration="2000">
-<div class="col-6, m-3">
-    <button type="button" class="btn btn-outline-secondary" routerLink="/paginados">
-        ⇇             
-     </button> 
+<div class="container" data-aos="zoom-out-right" data-aos-delay="200" data-aos-duration="2000">
+    <div class="col-6">
+        <button type="button" class="btn btn-outline-secondary" routerLink="/paginados">
+            ⇇
+        </button>
+        <br>
+    </div>
 </div>
-</div> 
-<div class="container" data-aos="zoom-out-right"  data-aos-delay="200" data-aos-duration="2000">
+<div class="container" data-aos="zoom-out-right" data-aos-delay="200" data-aos-duration="2000">
     <div class="row">
         <div>
             <form (ngSubmit)="crearExpLab()" novalidate #f="ngForm">
@@ -19,16 +20,15 @@
                 </div>
                 <div class="form-group, col-6">
                     <label for="descripcionExp" class="fs-4">Descripción de funciones</label>
-                    <input type="text" class="form-control" id="descripcionExp" name="descripcionExp" [(ngModel)]="descripcionExp"
-                        required>
+                    <input type="text" class="form-control" id="descripcionExp" name="descripcionExp"
+                        [(ngModel)]="descripcionExp" required>
                 </div>
                 <br>
                 <button class="btn btn-outline-secondary">
                     Enviar
                 </button>
             </form>
+            <br>
         </div>
     </div>
 </div>
-
-

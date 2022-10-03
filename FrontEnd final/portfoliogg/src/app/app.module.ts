@@ -27,9 +27,6 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 
 
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,11 +47,7 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
     FootersinanimComponent,
     NavbarbuttonComponent,
     HabilidadesComponent,
-    ProyectosComponent,
-   
-   
-
-   
+    ProyectosComponent,  
   ],
   imports: [
     BrowserModule,

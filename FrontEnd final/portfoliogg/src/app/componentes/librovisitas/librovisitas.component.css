@@ -1,18 +1,18 @@
-#divmensaje{
-    max-width:60vh;
+#divmensaje {
+    max-width: 60vh;
     word-break: break-all;
     padding-top: 3vh;
 }
 
-#divnombre{
+#divnombre {
     text-align: right;
-    max-width:60vh;
+    max-width: 60vh;
     word-break: break-all;
     margin-right: 0%;
 }
 
 
-#divboto{
-    margin-top: 2.5vh;  
-    padding-bottom: 2.5vh;  
+#divboto {
+    margin-top: 2.5vh;
+    padding-bottom: 2.5vh;
 }

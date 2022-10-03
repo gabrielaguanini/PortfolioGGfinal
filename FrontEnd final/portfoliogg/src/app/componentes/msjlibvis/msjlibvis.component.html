@@ -1,21 +1,20 @@
-
 <br>
 <br>
-<div class="container" data-aos="zoom-out-right"  data-aos-delay="200" data-aos-duration="2000">
-<div class="col-6, pb-3">
-</div> 
+<div class="container" data-aos="zoom-out-right" data-aos-delay="200" data-aos-duration="2000">
+    <div class="col-6, pb-3">
+    </div>
 </div>
-<div class="container" data-aos="zoom-out-right"  data-aos-delay="150" data-aos-duration="2000">
-     <button type="button" class="btn btn-outline-secondary" (click)="cerrarModal()">
-        ✘             
-     </button> 
+<div class="container" data-aos="zoom-out-right" data-aos-delay="150" data-aos-duration="2000">
+    <button type="button" class="btn btn-outline-secondary" (click)="cerrarModal()">
+        ✘
+    </button>
     <div class="row, pt-3">
         <div>
             <form (ngSubmit)="crearMensaje()" (ngSubmit)="cerrarModal()" novalidate #f="ngForm">
                 <div class="form-group, col-6">
                     <label for="nombreLV" class="fs-4">Tu nombre </label>
-                    <input type="text" class="form-control form-control-sm" id="nombreLV" name="nombreLV" [(ngModel)]="nombreLV"
-                        required>
+                    <input type="text" class="form-control form-control-sm" id="nombreLV" name="nombreLV"
+                        [(ngModel)]="nombreLV" required>
                 </div>
                 <div class="form-group, col-6">
                     <label for="mensajeLV" class="fs-4">Tu mensaje</label>
@@ -31,4 +30,3 @@
         </div>
     </div>
 </div>
-

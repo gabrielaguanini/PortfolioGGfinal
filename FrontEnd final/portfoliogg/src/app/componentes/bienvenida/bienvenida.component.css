@@ -48,6 +48,7 @@ animation01
         transform: scale3d(1, 0, 1);
         opacity: 1;
     }
+
     100% {
         transform: scale3d(1, 1, 1);
         opacity: 1;
@@ -93,6 +94,7 @@ animation02
         transform: scale3d(0, 0, 1);
         opacity: 1;
     }
+
     100% {
         transform: scale3d(1, 1, 1);
         opacity: 1;
@@ -154,6 +156,7 @@ animation03
         transform: scale3d(0, 0, 1);
         opacity: 1;
     }
+
     100% {
         transform: scale3d(1, 1, 1);
         opacity: 1;
@@ -164,6 +167,7 @@ animation03
     0% {
         border: 0.25vw solid #54988b;
     }
+
     100% {
         border: 0 solid #54988b;
     }
@@ -173,6 +177,7 @@ animation03
     0% {
         border: 0.5vw solid #4b5e58;
     }
+
     100% {
         border: 0 solid #4b5e58;
     }
@@ -182,6 +187,7 @@ animation03
     0% {
         border: 1vw solid #404a52;
     }
+
     100% {
         border: 0 solid #404a52;
     }
@@ -237,6 +243,7 @@ line01
         transform: scale3d(1, 1, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: top;
         transform: scale3d(1, 0, 1);
@@ -250,6 +257,7 @@ line01
         transform: scale3d(1, 0, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: bottom;
         transform: scale3d(1, 1, 1);
@@ -287,6 +295,7 @@ line02
         transform: scale3d(1, 1, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: top;
         transform: scale3d(1, 0, 1);
@@ -300,6 +309,7 @@ line02
         transform: scale3d(1, 0, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: bottom;
         transform: scale3d(1, 1, 1);
@@ -329,6 +339,7 @@ line03
         transform: scale3d(1, 1, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: right;
         transform: scale3d(0, 1, 1);
@@ -342,6 +353,7 @@ line03
         transform: scale3d(0, 1, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: left;
         transform: scale3d(1, 1, 1);
@@ -379,6 +391,7 @@ line04
         transform: scale3d(1, 1, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: top;
         transform: scale3d(1, 0, 1);
@@ -392,6 +405,7 @@ line04
         transform: scale3d(1, 0, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: bottom;
         transform: scale3d(1, 1, 1);
@@ -421,6 +435,7 @@ line05
         transform: scale3d(1, 1, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: bottom;
         transform: scale3d(1, 0, 1);
@@ -434,6 +449,7 @@ line05
         transform: scale3d(1, 0, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: top;
         transform: scale3d(1, 1, 1);
@@ -471,6 +487,7 @@ line06
         transform: scale3d(1, 1, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: top;
         transform: scale3d(1, 0, 1);
@@ -484,6 +501,7 @@ line06
         transform: scale3d(1, 0, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: bottom;
         transform: scale3d(1, 1, 1);
@@ -513,6 +531,7 @@ line07
         transform: scale3d(1, 1, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: left;
         transform: scale3d(0, 1, 1);
@@ -526,6 +545,7 @@ line07
         transform: scale3d(0, 1, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: right;
         transform: scale3d(1, 1, 1);
@@ -563,6 +583,7 @@ line08
         transform: scale3d(1, 1, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: top;
         transform: scale3d(1, 0, 1);
@@ -576,6 +597,7 @@ line08
         transform: scale3d(1, 0, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: bottom;
         transform: scale3d(1, 1, 1);
@@ -867,6 +889,7 @@ red circle
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -877,14 +900,17 @@ red circle
         background: #f2f3df;
         transform: rotate(0deg);
     }
+
     50% {
         background: #f2f3df;
         transform: rotate(-180deg);
     }
+
     50.01% {
         background: #f2f3df;
         transform: rotate(-180deg);
     }
+
     100% {
         background: #f2f3df;
         transform: rotate(-360deg);
@@ -895,9 +921,11 @@ red circle
     0% {
         transform: rotate(0deg);
     }
+
     50% {
         transform: rotate(-180deg);
     }
+
     100% {
         transform: rotate(-360deg);
     }
@@ -971,6 +999,7 @@ animation06
         transform: scale3d(0, 0, 1);
         opacity: 1;
     }
+
     100% {
         transform: scale3d(10, 10, 1);
         opacity: 1;
@@ -1019,6 +1048,7 @@ animation07
         transform: scale3d(1, 1, 1);
         opacity: 1;
     }
+
     100% {
         transform: scale3d(1.4, 1.4, 1);
         opacity: 0;
@@ -1030,6 +1060,7 @@ animation07
         transform: scale3d(0, 0, 1);
         opacity: 1;
     }
+
     100% {
         transform: scale3d(1, 1, 1);
         opacity: 1;
@@ -1191,6 +1222,7 @@ line06
         transform: scale3d(1, 1, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: top;
         transform: scale3d(1, 0, 1);
@@ -1204,6 +1236,7 @@ line06
         transform: scale3d(1, 0, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: bottom;
         transform: scale3d(1, 1, 1);
@@ -1217,6 +1250,7 @@ line06
         transform: scale3d(1, 1, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: bottom;
         transform: scale3d(1, 0, 1);
@@ -1230,6 +1264,7 @@ line06
         transform: scale3d(1, 0, 1);
         opacity: 1;
     }
+
     100% {
         transform-origin: top;
         transform: scale3d(1, 1, 1);
@@ -1254,12 +1289,12 @@ animation08
 .animation08 div:nth-of-type(1) {
     width: 100%;
     height: 100%;
-    background-image:url('/assets/Imagenes/Bienvenida.jpg');
+    background-image: url('/assets/Imagenes/Bienvenida.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-   
-    
+
+
 }
 
 
@@ -1292,6 +1327,7 @@ animation08
         transform: translateY(-200vh);
         opacity: 1;
     }
+
     100% {
         transform: translateY(0);
         opacity: 1;
@@ -1299,117 +1335,135 @@ animation08
 }
 
 @media screen and (max-width: 750px) {
-/*===================
+
+    /*===================
 animation02
 ====================*/
-@keyframes animation02 {
-    0% {
-        transform: scale3d(0, 0, 1);
-        opacity: 1;
+    @keyframes animation02 {
+        0% {
+            transform: scale3d(0, 0, 1);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale3d(1.2, 1.2, 1);
+            opacity: 1;
+        }
     }
-    100% {
-        transform: scale3d(1.2, 1.2, 1);
-        opacity: 1;
-    }
-}
-/*==============
+
+    /*==============
 green circle
 ==============*/
-.green01 {
-    width: 70vw;
-    height: 70vw;
-}
-.green01::before {
-    left: 35vw;
-    width: 70vw;
-    height: 70vw;
-    transform-origin: left 35vw;
-}
-.green01::after {
-    left: -35vw;
-    width: 70vw;
-    height: 70vw;
-    transform-origin: right 35vw;
-}
-/*==============
+    .green01 {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .green01::before {
+        left: 35vw;
+        width: 70vw;
+        height: 70vw;
+        transform-origin: left 35vw;
+    }
+
+    .green01::after {
+        left: -35vw;
+        width: 70vw;
+        height: 70vw;
+        transform-origin: right 35vw;
+    }
+
+    /*==============
 navy circle
 ==============*/
-.navy01 {
-    width: 50vw;
-    height: 50vw;
-}
-.navy01::before {
-    left: 25vw;
-    width: 50vw;
-    height: 50vw;
-    transform-origin: left 25vw;
-}
-.navy01::after {
-    left: -25vw;
-    width: 50vw;
-    height: 50vw;
-    transform-origin: right 25vw;
-}
-/*==============
+    .navy01 {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .navy01::before {
+        left: 25vw;
+        width: 50vw;
+        height: 50vw;
+        transform-origin: left 25vw;
+    }
+
+    .navy01::after {
+        left: -25vw;
+        width: 50vw;
+        height: 50vw;
+        transform-origin: right 25vw;
+    }
+
+    /*==============
 yellow circle
 ==============*/
-.yellow01 {
-    width: 35vw;
-    height: 35vw;
-}
-.yellow01::before {
-    left: 17.5vw;
-    width: 35vw;
-    height: 35vw;
-    transform-origin: left 17.5vw;
-}
-.yellow01::after {
-    left: -17.5vw;
-    width: 35vw;
-    height: 35vw;
-    transform-origin: right 17.5vw;
-}
-/*==============
+    .yellow01 {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .yellow01::before {
+        left: 17.5vw;
+        width: 35vw;
+        height: 35vw;
+        transform-origin: left 17.5vw;
+    }
+
+    .yellow01::after {
+        left: -17.5vw;
+        width: 35vw;
+        height: 35vw;
+        transform-origin: right 17.5vw;
+    }
+
+    /*==============
 blue circle
 ==============*/
-.blue01 {
-    width: 20vw;
-    height: 20vw;
-}
-.blue01::before {
-    left: 10vw;
-    width: 20vw;
-    height: 20vw;
-    transform-origin: left 10vw;
-}
-.blue01::after {
-    left: -10vw;
-    width: 20vw;
-    height: 20vw;
-    transform-origin: right 10vw;
-}
-.blue00 {
-    width: 7vw;
-    height: 7vw;
-}
-/*==============
+    .blue01 {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .blue01::before {
+        left: 10vw;
+        width: 20vw;
+        height: 20vw;
+        transform-origin: left 10vw;
+    }
+
+    .blue01::after {
+        left: -10vw;
+        width: 20vw;
+        height: 20vw;
+        transform-origin: right 10vw;
+    }
+
+    .blue00 {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    /*==============
 red circle
 ==============*/
-.red00 {
-    width: 6vw;
-    height: 6vw;
-}
-/*===================
+    .red00 {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    /*===================
 animation06
 ====================*/
-@keyframes rhombus {
-    0% {
-        transform: scale3d(0, 0, 1);
-        opacity: 1;
+    @keyframes rhombus {
+        0% {
+            transform: scale3d(0, 0, 1);
+            opacity: 1;
+        }
+
+        100% {
+            transform: scale3d(20, 20, 1);
+            opacity: 1;
+        }
     }
-    100% {
-        transform: scale3d(20, 20, 1);
-        opacity: 1;
-    }
-}
 }

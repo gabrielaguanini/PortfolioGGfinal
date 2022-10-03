@@ -34,8 +34,7 @@ export class TrabcrearComponent implements OnInit {
 
     this.pagdosServ.crearExpLab(paginados).subscribe(
       data =>{
-        alert("Experiencia creada");
-        this.ruteador.navigate(['/paginados']);
+       this.ruteador.navigate(['/paginados']);
       },
       err =>{
         alert("No se pudo agregar experiencia");

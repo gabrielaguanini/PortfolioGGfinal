@@ -1,19 +1,20 @@
 <app-encabezadosinanim></app-encabezadosinanim>
 <br>
 <br>
-<div class="container" data-aos="zoom-out-right"  data-aos-delay="200" data-aos-duration="2000">
-<div class="col-6, m-3">
-    <button type="button" class="btn btn-outline-secondary" routerLink="/librovisitas">
-        ⇇             
-     </button> 
-    </div>     
+<div class="container" data-aos="zoom-out-right" data-aos-delay="200" data-aos-duration="2000">
+    <div class="col-6">
+        <button type="button" class="btn btn-outline-secondary" routerLink="/librovisitas">
+            ⇇
+        </button>
+        <br>
+    </div>
 </div>
-<div class="container" data-aos="zoom-out-right"  data-aos-delay="200" data-aos-duration="2000">
+<div class="container" data-aos="zoom-out-right" data-aos-delay="200" data-aos-duration="2000">
     <div class="row">
         <div>
             <form (ngSubmit)="editarMensaje()" novalidate #f="ngForm">
-                <div class="form-group, col-6"> 
-                    <label for="nombreLV" class="fs-4">Tu nombre </label>                  
+                <div class="form-group, col-6">
+                    <label for="nombreLV" class="fs-4">Tu nombre </label>
                     <input type="text" class="form-control" id="nombreLV" name="nombreLV"
                         [(ngModel)]="librovisitas.nombreLV" required>
                 </div>
@@ -29,11 +30,8 @@
                 </button>
             </form>
         </div>
-     </div>
+    </div>
 </div>
 <br>
 <br>
 <br>
-
-
-
