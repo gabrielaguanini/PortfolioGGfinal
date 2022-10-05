@@ -4,6 +4,7 @@ import { Librovisitas } from 'src/app/model/librovisitas';
 import { LibrovisitasService } from 'src/app/service/librovisitas.service';
 import * as AOS from 'aos';
 import { ModalService } from 'src/app/service/modal.service';
+import { TokenService } from 'src/app/service/token.service';
 
 
 @Component({
@@ -19,10 +20,13 @@ export class MsjlibvisComponent implements OnInit {
 
   constructor(private libvisServ: LibrovisitasService, 
               private ruteador: Router,
-              private modalServ:ModalService  ) { }
+              private modalServ:ModalService,
+              private tokenService: TokenService ) { }
 
   ngOnInit(): void {
- 
+    if (this.tokenService.getToken() == null) {
+      this.ruteador.navigate(['iniciar-sesion']);
+       }
       AOS.init();
     
   }

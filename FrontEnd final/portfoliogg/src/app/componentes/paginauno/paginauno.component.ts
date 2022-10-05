@@ -15,10 +15,23 @@ export class PaginaunoComponent implements OnInit {
 
   ngOnInit(): void {
 
-   if (this.tokenService.getToken() == null) {
-   this.router.navigate(['iniciar-sesion']);
+    this.animacion_acercade();
+
+    if (this.tokenService.getToken() == null) {
+      this.router.navigate(['iniciar-sesion']);
     }
 
     AOS.init();
+  }
+  animacion_acercade() {
+    document.getElementById('animacionacercade')?.animate([
+
+      { transform: 'translateY(-600px)' },
+      { transform: 'translateY(0px)' }
+    ], {
+
+      duration: 4000,
+
+    })
   }
 }
