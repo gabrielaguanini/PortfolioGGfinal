@@ -16,7 +16,7 @@ import { GuardGuard } from 'src/app/service/guard.guard';
 const routes: Routes = [
 
   { path: 'bienvenida', component: BienvenidaComponent }, 
-  { path: 'paginauno', component: PaginaunoComponent},
+  { path: 'paginauno', component: PaginaunoComponent, canActivate:[GuardGuard]},
   { path: 'iniciar-sesion', component: IniciarSesionComponent },
   { path: 'paginados', component: PaginadosComponent, canActivate:[GuardGuard] },
   { path: 'librovisitas', component: LibrovisitasComponent, canActivate:[GuardGuard] },

@@ -27,12 +27,13 @@
     border-radius: 20%;
     margin-top: 1vh;
 
+
 }
 
 .button span {
     height: 3px;
     width: 100%;
-    background: #616161;
+    background: #242424;
     display: inline-block;
     transition: all 0.5s cubic-bezier(.62, .43, .35, 1.47);
 }
